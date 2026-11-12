@@ -28,3 +28,4 @@ A publicação ocorre após revisão local, em repositório novo. Nenhum arquivo
 ## Execução
 
 - T1: catálogo com três skills próprias, formato extensível a MCP/plugin, origem/licenças e exercício sanitizado. Validador, 10 testes de contrato e regressão do exemplo aprovados. Nenhum terceiro publicado.
+- T2: instalador sem dependências de runtime, com escopos, simulação, integridade e conflitos explícitos; ZIPs com checksums. Oito testes do instalador e um de empacotamento aprovados.
