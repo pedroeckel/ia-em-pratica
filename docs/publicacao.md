@@ -11,3 +11,7 @@ Para gerar downloads localmente: `npm run package`. Publique ZIPs e SHA256SUMS j
 Para desenvolvimento: `npm ci --ignore-scripts`, `npm run check` e `npm run preview`. Node 22+, Python 3.12+ para a regressão do exercício. O catálogo e o instalador não requerem backend ou credenciais.
 
 Revalide recursos antes da aula e após mudança upstream. A data de evidência nunca é renovada por um build; o site calcula revisão pendente com a janela registrada. Métricas de uso dependem de observação real, conforme o plano de aula.
+
+## Proveniência da primeira edição
+
+Antes da primeira publicação, os e-mails dos commits foram normalizados para o endereço público noreply do mantenedor. As árvores de conteúdo de todos os commits foram preservadas. O [mapa de proveniência](../evidence/publication-provenance.json) relaciona os hashes locais citados nos relatórios aos commits públicos com conteúdo idêntico. A mudança de metadados Git não altera o veredito técnico.

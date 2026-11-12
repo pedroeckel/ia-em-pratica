@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-12",
+  "operation": "Normalização da autoria para endereço público noreply antes da primeira publicação; conteúdo das árvores preservado",
+  "commits": [
+    {
+      "reviewedCommit": "fb9e30c096b66830edf1d0feaeb8aad071f449ce",
+      "publicCommit": "d9352e90c59a2ff228edaa096476a5f2db0b45c2",
+      "tree": "32adba15015e369f2a7885757f74218f0ca96942"
+    },
+    {
+      "reviewedCommit": "917384bfbdbca006330994b7f6ecbc3e2788063b",
+      "publicCommit": "68f1efd9c03c231877e33b22cbe5ba1b8498f753",
+      "tree": "c9e14e237817fb5ca1c6b2897a7244d990756d51"
+    },
+    {
+      "reviewedCommit": "e04a19da5d2420624a0c7138a20445c182128c03",
+      "publicCommit": "70cc3fca97cef4ac7e6884bb40491b1b59902a4d",
+      "tree": "99bbc626d37f0f4ce16675a950db8a831c743202"
+    },
+    {
+      "reviewedCommit": "2eb54a446cdaf3dba69e665c4567fc8ddd356b3a",
+      "publicCommit": "ef57f06a79d486ef9aad46362c5645c8703a7d06",
+      "tree": "b37685480bcef71d2f006bf666733e942dfbc5ae"
+    },
+    {
+      "reviewedCommit": "5055ed16408ba90d37682f6d8020a0e754ce4203",
+      "publicCommit": "4fe8225727439e6fff596b0b16dc85c11b4ca7eb",
+      "tree": "8f6000d79ae4cf55d1dacb6d1ebb4496645bce3c"
+    },
+    {
+      "reviewedCommit": "1a1243c3c50c9c7021491614e5c130e7f7d1d2d7",
+      "publicCommit": "53ab8f278fb2018a71397fa6b29235e52bed7f82",
+      "tree": "aeec9b4a345706d6180c8f4d05c3dfa0fd5621a0"
+    },
+    {
+      "reviewedCommit": "6f7781817730df0e3fccc138171f6edd257eafe1",
+      "publicCommit": "d99c654d888497cbe81372a0c33d5251da615357",
+      "tree": "2ae621dbb39b0b5e8324d16ec2b7a26e21b838ef"
+    },
+    {
+      "reviewedCommit": "16d8269d025e2a904d7ed6d60057c72e7f2d713a",
+      "publicCommit": "5bc961e3ee7192a1523ec8b91bc2fc9da9f38d8e",
+      "tree": "4943156e9b469c6d0f17a36b9db4f367accdb1e8"
+    },
+    {
+      "reviewedCommit": "9334fe50af92d457f0e1b7c10a55c36f975cbcaa",
+      "publicCommit": "8a40f6f5ab0e1794bb42151494aa37a98a3070a9",
+      "tree": "4c970f45f290a5109f51cd8a02f34cf461ce566a"
+    },
+    {
+      "reviewedCommit": "d9b993867a8a1ba755c30dd8aedf65d3ec3a1f8d",
+      "publicCommit": "7d04ac01879910525b4805612b6ceb6b199b9c48",
+      "tree": "a2d3407ddfe886fabb04b6d31d714e0724c23f79"
+    }
+  ]
+}
