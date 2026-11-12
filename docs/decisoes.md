@@ -7,3 +7,5 @@
 
 - 2026-11-12 — Consistência de validade: páginas de detalhes também recebem os dados de validação e recalculam vencimento no cliente. O índice Markdown declara explicitamente seu instante de referência, calculado com a mesma regra, e aponta para o estado atual no site; não exige serviço externo ou atualização automática de commits para parecer atual.
 - 2026-11-12 — Publicação de evidências: substituir também caminhos de diretórios temporários/cache nos relatórios históricos por marcadores. São cópias sanitizadas, com preservação do código e dos testes do exercício, não os arquivos brutos locais.
+
+- 2026-11-12 — Compatibilidade do instalador: o CI inicial encontrou `ERR_FS_CP_EEXIST` no Node recente ao copiar uma árvore para a pasta já reservada. A entrega passa a copiar os arquivos inventariados com `COPYFILE_EXCL`, preservando a reserva exclusiva do diretório e a recusa de sobrescrita, sem depender dessa variação de `fs.cp`. A conferência integral de hashes permanece antes e depois da cópia.
