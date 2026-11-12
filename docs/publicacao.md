@@ -15,3 +15,5 @@ Revalide recursos antes da aula e após mudança upstream. A data de evidência 
 ## Proveniência da primeira edição
 
 Antes da primeira publicação, os e-mails dos commits foram normalizados para o endereço público noreply do mantenedor. As árvores de conteúdo de todos os commits foram preservadas. O [mapa de proveniência](../evidence/publication-provenance.json) relaciona os hashes locais citados nos relatórios aos commits públicos com conteúdo idêntico. A mudança de metadados Git não altera o veredito técnico.
+
+A `main` exige PR, os três checks da matriz e resolução de conversas; bloqueia force push e exclusão. Não exige aprovação de outra pessoa, pois há um único mantenedor. O proprietário mantém a permissão administrativa de exceção; o fluxo normal é revisar e aguardar os checks antes de integrar. Relatos privados de vulnerabilidade estão habilitados no GitHub.

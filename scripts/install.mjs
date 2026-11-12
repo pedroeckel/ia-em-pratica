@@ -1,4 +1,5 @@
-import { cp, mkdir, mkdtemp, readFile, lstat, rm, realpath } from 'node:fs/promises';
+import { constants } from 'node:fs';
+import { cp, copyFile, mkdir, mkdtemp, readFile, lstat, rm, realpath } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -53,7 +54,11 @@ export async function installSkills({ names, agent, scope, projectRoot = process
       if (!sameInventory(item.inventory, await fileInventory(payload))) throw new Error('Cópia não corresponde à origem verificada');
       await mkdir(item.target);
       try {
-        await cp(payload, item.target, { recursive: true, errorOnExist: true, force: false });
+        for (const relative of Object.keys(item.inventory)) {
+          const targetFile = safePath(item.target, relative);
+          await mkdir(path.dirname(targetFile), { recursive: true });
+          await copyFile(safePath(payload, relative), targetFile, constants.COPYFILE_EXCL);
+        }
         if (!sameInventory(item.inventory, await fileInventory(item.target))) throw new Error('Destino não corresponde à cópia verificada');
       } catch (error) {
         throw new Error(`Instalação interrompida em ${item.target}; o destino foi preservado para inspeção.`, { cause: error });
