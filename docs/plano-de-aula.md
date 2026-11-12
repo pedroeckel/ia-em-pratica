@@ -2,7 +2,7 @@
 
 ## Antes da aula
 
-Escolha a versão dos materiais, confirme o cliente disponível e teste a instalação numa pasta limpa. Compartilhe o [catálogo](https://pedroeckel.github.io/ia-em-pratica/) e o brief do carrinho. Quem não tiver cliente compatível pode inspecionar o exemplo publicado, sem simular que executou a atividade.
+Escolha a versão dos materiais, confirme o cliente disponível e teste a instalação numa pasta limpa. Compartilhe o [catálogo](https://pedroeckel.github.io/ia-em-pratica/) e o brief do carrinho. Cada aluno trabalha numa pasta nova fora do catálogo, com uma cópia do brief; o exemplo resolvido fica como referência de comparação. Quem não tiver cliente compatível pode inspecionar o exemplo publicado, sem simular que executou a atividade.
 
 ## Atividade sugerida — 30 minutos
 

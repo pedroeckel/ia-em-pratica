@@ -18,8 +18,8 @@ Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e par
 
 ## Primeiro resultado
 
-1. Abra o [guia de instalação](docs/instalacao.md) e escolha seu cliente.
-2. Use uma ideia pequena: o [brief de carrinho](examples/fluxo-completo/carrinho/brief.md) já contém as regras.
+1. Abra o [guia de instalação](docs/instalacao.md) e escolha seu cliente. Crie uma pasta nova fora deste catálogo para o seu projeto.
+2. Salve nessa pasta uma cópia do [brief de carrinho](examples/fluxo-completo/carrinho/brief.md), que já contém as regras. Abra a pasta no seu cliente e use o exemplo pronto para comparar os resultados.
 3. Peça ao assistente que use `criar-prd`; siga para `criar-spec` e `executar-spec`.
 4. Compare seus documentos e testes com o [exemplo completo](examples/fluxo-completo/relatorio.md).
 
