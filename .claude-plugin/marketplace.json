@@ -1,0 +1,17 @@
+{
+  "name": "ia-em-pratica",
+  "owner": {
+    "name": "Pedro Eckel"
+  },
+  "metadata": {
+    "description": "Recursos de IA com curadoria e evidências para aprender fazendo.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "produto-para-codigo",
+      "source": "./",
+      "description": "Do PRD à implementação, com três skills e critérios verificáveis."
+    }
+  ]
+}

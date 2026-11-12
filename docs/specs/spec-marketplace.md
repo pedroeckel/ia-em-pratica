@@ -30,3 +30,4 @@ A publicação ocorre após revisão local, em repositório novo. Nenhum arquivo
 - T1: catálogo com três skills próprias, formato extensível a MCP/plugin, origem/licenças e exercício sanitizado. Validador, 10 testes de contrato e regressão do exemplo aprovados. Nenhum terceiro publicado.
 - T2: instalador sem dependências de runtime, com escopos, simulação, integridade e conflitos explícitos; ZIPs com checksums. Oito testes do instalador e um de empacotamento aprovados.
 - T3: catálogo e guias estáticos, busca/filtros e URLs compartilháveis, HTML sem JS, cópia de comandos e interface responsiva. Seis testes de busca/renderização e smoke de navegador aprovados; publicação ainda pendente.
+- T4: workflows fixados a commits oficiais, matriz Linux/Windows, deploy condicionado aos testes, documentação de uso e curadoria, formulários e manifesto Claude validados localmente. Revisão independente e execução do CI remoto ainda pendentes.

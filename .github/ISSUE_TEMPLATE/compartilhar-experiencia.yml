@@ -1,0 +1,31 @@
+name: Compartilhar experiência
+description: Conte o que conseguiu fazer e onde encontrou atrito.
+title: "[Experiência] "
+body:
+  - type: markdown
+    attributes:
+      value: "Não inclua tokens, dados pessoais ou arquivos de clientes. Sugestão não concede selo de validação automaticamente."
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: "Qual era seu objetivo?"
+    validations:
+      required: true
+  - type: textarea
+    id: recursos
+    attributes:
+      label: "Quais recursos, versões e cliente usou?"
+    validations:
+      required: true
+  - type: textarea
+    id: resultado
+    attributes:
+      label: "O que você produziu? Descreva sem dados pessoais ou de clientes."
+    validations:
+      required: true
+  - type: textarea
+    id: atrito
+    attributes:
+      label: "O que facilitou ou dificultou o primeiro resultado?"
+    validations:
+      required: false

@@ -1,0 +1,37 @@
+name: Relatar dificuldade
+description: Ajude a reproduzir uma falha de instalação ou uso.
+title: "[Dificuldade] "
+body:
+  - type: markdown
+    attributes:
+      value: "Não inclua tokens, dados pessoais ou arquivos de clientes. Sugestão não concede selo de validação automaticamente."
+  - type: textarea
+    id: recurso
+    attributes:
+      label: "Recurso e versão"
+    validations:
+      required: true
+  - type: textarea
+    id: ambiente
+    attributes:
+      label: "Cliente, versão e sistema operacional"
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: "Passos ou comando executado, sem credenciais"
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: "Resultado esperado"
+    validations:
+      required: true
+  - type: textarea
+    id: observado
+    attributes:
+      label: "Resultado observado e mensagem de erro sem dados privados"
+    validations:
+      required: true

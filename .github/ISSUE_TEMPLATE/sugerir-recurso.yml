@@ -1,0 +1,37 @@
+name: Sugerir recurso
+description: Proponha uma skill, MCP ou plugin para avaliação.
+title: "[Recurso] "
+body:
+  - type: markdown
+    attributes:
+      value: "Não inclua tokens, dados pessoais ou arquivos de clientes. Sugestão não concede selo de validação automaticamente."
+  - type: textarea
+    id: tarefa
+    attributes:
+      label: "Que tarefa da turma ele resolve?"
+    validations:
+      required: true
+  - type: textarea
+    id: fonte
+    attributes:
+      label: "Link oficial e autoria"
+    validations:
+      required: true
+  - type: textarea
+    id: tipo
+    attributes:
+      label: "Tipo e clientes compatíveis"
+    validations:
+      required: true
+  - type: textarea
+    id: teste
+    attributes:
+      label: "O que você testou? Informe versão, ambiente, resultado e limites. Se ainda não testou, diga isso."
+    validations:
+      required: true
+  - type: textarea
+    id: permissoes
+    attributes:
+      label: "Credenciais, permissões, custo/plano e licença conhecidos"
+    validations:
+      required: false

@@ -1,0 +1,17 @@
+{
+  "name": "produto-para-codigo",
+  "version": "0.1.0",
+  "description": "Três skills para criar PRD, derivar SPEC e implementar com evidências.",
+  "author": {
+    "name": "Pedro Eckel"
+  },
+  "homepage": "https://github.com/pedroeckel/ia-em-pratica",
+  "repository": "https://github.com/pedroeckel/ia-em-pratica",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "prd",
+    "spec",
+    "skills",
+    "educacao"
+  ]
+}
