@@ -1,6 +1,6 @@
 # SPEC 01.1 — Catálogo, distribuição e curadoria
 
-Origem: [PRD 01](../produto/prd-marketplace.md). Estado: implementada e aprovada na verificação técnica local da versão 0.1.0; CI e publicação remotos pendentes.
+Origem: [PRD 01](../produto/prd-marketplace.md). Estado: implementada e aprovada na verificação técnica local da versão 0.1.0; CI e publicação acompanhados pelo [pipeline do GitHub](https://github.com/pedroeckel/ia-em-pratica/actions).
 
 ## Implementação
 

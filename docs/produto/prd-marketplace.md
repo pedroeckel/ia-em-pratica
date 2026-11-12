@@ -33,4 +33,4 @@ Aceite técnico: gates locais e CI, navegação desktop/mobile, instalador em di
 
 ## Situação da entrega
 
-Implementação e verificação independente local concluídas. A publicação e o CI remoto permanecem pendentes até resultado observado. Uso pedagógico e metas de adoção continuam sem medição. Evidências em [validação técnica](../validacao-independente.md).
+Implementação e verificação independente local concluídas. O resultado remoto da publicação e dos testes fica registrado no [pipeline do GitHub](https://github.com/pedroeckel/ia-em-pratica/actions). Uso pedagógico e metas de adoção continuam sem medição. Evidências em [validação técnica](../validacao-independente.md).
