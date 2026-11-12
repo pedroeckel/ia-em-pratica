@@ -14,6 +14,8 @@ Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e par
 | Detalhar uma entrega a partir do PRD | [criar-spec](skills/criar-spec/SKILL.md) | SPEC com contratos, dependências e validação |
 | Implementar o que foi especificado | [executar-spec](skills/executar-spec/SKILL.md) | Código, testes e evidências dos critérios |
 
+**PRD** é o documento de requisitos do produto; **SPEC** detalha uma entrega e como verificá-la.
+
 **Skill** ensina um procedimento ao assistente. **MCP** conecta ferramentas e dados. **Plugin** reúne capacidades para um cliente específico. O catálogo aceita os três tipos, mas **nenhuma integração de terceiro é publicada nesta primeira versão**: elas entrarão depois da curadoria.
 
 ## Primeiro resultado

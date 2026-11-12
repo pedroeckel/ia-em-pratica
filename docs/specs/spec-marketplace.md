@@ -1,6 +1,6 @@
 # SPEC 01.1 — Catálogo, distribuição e curadoria
 
-Origem: [PRD 01](../produto/prd-marketplace.md). Estado: planejamento da versão 0.1.0.
+Origem: [PRD 01](../produto/prd-marketplace.md). Estado: implementada e aprovada na verificação técnica local da versão 0.1.0; CI e publicação remotos pendentes.
 
 ## Implementação
 
@@ -34,4 +34,6 @@ A publicação ocorre após revisão local, em repositório novo. Nenhum arquivo
 
 ## Correções após revisão independente
 
-A primeira rodada encontrou vencimento não atualizado no detalhe e caminhos temporários em evidências. O detalhe agora recebe o contexto necessário para recalcular a revisão sem depender de novo build. O índice Markdown calcula a mesma regra na data declarada da edição e é explicitamente histórico, com link ao estado atual. As referências restantes de diretórios temporários/cache foram substituídas por marcadores. Revalidação independente pendente.
+A primeira rodada encontrou vencimento não atualizado no detalhe e caminhos temporários em evidências. O detalhe agora recebe o contexto necessário para recalcular a revisão sem depender de novo build. O índice Markdown calcula a mesma regra na data declarada da edição e é explicitamente histórico, com link ao estado atual. As referências restantes de diretórios temporários/cache foram substituídas por marcadores. Revalidação independente concluída com aprovação local; ver [relatório final](../validacao-independente.md).
+
+- Fechamento local: revisão independente aprovada, com 27 testes Node, 26 testes do exemplo e probes de validade/sanitização. CI Linux/Windows e deploy serão registrados após execução real.

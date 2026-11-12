@@ -30,3 +30,7 @@ Meta inicial proposta: um aluno chegar ao primeiro exercício em até 10 minutos
 ## Evidências e riscos
 
 Aceite técnico: gates locais e CI, navegação desktop/mobile, instalador em diretórios temporários, revisão independente. Uso real por alunos continua não observado. Riscos: versão externa mudar, falso selo de validação, instalação sobrescrever trabalho e dependência desnecessária de infraestrutura. Mitigações no contrato da SPEC.
+
+## Situação da entrega
+
+Implementação e verificação independente local concluídas. A publicação e o CI remoto permanecem pendentes até resultado observado. Uso pedagógico e metas de adoção continuam sem medição. Evidências em [validação técnica](../validacao-independente.md).
