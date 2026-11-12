@@ -6,7 +6,7 @@
   "round1_sha256": "aa72725670fc279c145ce1fa141d282f1f4385cad1e9841a070e529a2ed92479",
   "head": "4cd0cd507a4df1c875752032d862828e7af36e56",
   "removed_temporary_directories": [
-    "/private/tmp/carrinho-rodada2-pycache-2att2q10",
-    "/private/tmp/carrinho-rodada2-sensor-pskwa66f"
+    "<diretorio-temporario>/carrinho-rodada2-pycache-2att2q10",
+    "<diretorio-temporario>/carrinho-rodada2-sensor-pskwa66f"
   ]
 }

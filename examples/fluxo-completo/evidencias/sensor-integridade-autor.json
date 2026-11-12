@@ -1,6 +1,6 @@
 {
   "criterion": "CAR-AC-08",
-  "scratch": "/private/tmp/sensor-integridade-carrinho-pw1ec1bg",
+  "scratch": "<diretorio-temporario>/sensor-integridade-carrinho-pw1ec1bg",
   "mutation": "Altera o preço do primeiro item depois de calcular subtotal, antes do retorno",
   "baseline_exit": 0,
   "mutant_exit": 0,

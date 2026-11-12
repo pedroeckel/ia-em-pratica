@@ -3,8 +3,8 @@
   "report_lines": 180,
   "report_links_valid": true,
   "removed_temporary_directories": [
-    "/private/tmp/carrinho-sensor-independente-sg169vvu",
-    "/private/tmp/carrinho-verificador-pycache-bq31meuz"
+    "<diretorio-temporario>/carrinho-sensor-independente-sg169vvu",
+    "<diretorio-temporario>/carrinho-verificador-pycache-bq31meuz"
   ],
   "real_tree_reads_ended_at": "d8cb76b8e4cd020b9194820e021aabdaaadb622e"
 }

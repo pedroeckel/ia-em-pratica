@@ -42,6 +42,7 @@ export async function validateCatalog(resources, root = repoRoot, today = new Da
 
 export function validateConfig(config) {
   if (!config || typeof config.name !== 'string' || !config.name.trim() || !/^[a-zA-Z0-9][a-zA-Z0-9-]{0,38}\/[a-zA-Z0-9][a-zA-Z0-9_.-]{0,99}$/.test(config.repository) || !/^\d+\.\d+\.\d+$/.test(config.version) || !/^[a-zA-Z0-9-]+$/.test(config.maintainer?.github)) throw new Error('Configuração editorial inválida');
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(config.releasedAt || '') || !Number.isFinite(Date.parse(config.releasedAt)) || new Date(config.releasedAt).toISOString().slice(0,10) !== config.releasedAt) throw new Error('Data da edição inválida');
   const site = new URL(config.siteUrl);
   if (site.protocol !== 'https:' || site.username || site.password || site.search || site.hash || !site.pathname.endsWith('/') || site.href !== config.siteUrl) throw new Error('URL canônica inválida');
   return config;

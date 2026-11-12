@@ -31,3 +31,7 @@ A publicação ocorre após revisão local, em repositório novo. Nenhum arquivo
 - T2: instalador sem dependências de runtime, com escopos, simulação, integridade e conflitos explícitos; ZIPs com checksums. Oito testes do instalador e um de empacotamento aprovados.
 - T3: catálogo e guias estáticos, busca/filtros e URLs compartilháveis, HTML sem JS, cópia de comandos e interface responsiva. Seis testes de busca/renderização e smoke de navegador aprovados; publicação ainda pendente.
 - T4: workflows fixados a commits oficiais, matriz Linux/Windows, deploy condicionado aos testes, documentação de uso e curadoria, formulários e manifesto Claude validados localmente. Revisão independente e execução do CI remoto ainda pendentes.
+
+## Correções após revisão independente
+
+A primeira rodada encontrou vencimento não atualizado no detalhe e caminhos temporários em evidências. O detalhe agora recebe o contexto necessário para recalcular a revisão sem depender de novo build. O índice Markdown calcula a mesma regra na data declarada da edição e é explicitamente histórico, com link ao estado atual. As referências restantes de diretórios temporários/cache foram substituídas por marcadores. Revalidação independente pendente.

@@ -1,8 +1,16 @@
 import { parseState, serializeState, filterResources, effectiveStatus, statusLabels } from './catalog-core.mjs';
 
+const data = document.querySelector('#catalog-data');
+const resources = data ? JSON.parse(data.textContent) : [];
+for (const badge of document.querySelectorAll('[data-resource-status]')) {
+  const resource = resources.find((item) => item.id === badge.dataset.resourceStatus);
+  if (resource) {
+    badge.textContent = statusLabels[effectiveStatus(resource)];
+    badge.dataset.status = effectiveStatus(resource);
+  }
+}
 const form = document.querySelector('#catalog-filters');
 if (form) {
-  const resources = JSON.parse(document.querySelector('#catalog-data').textContent);
   const controls = Object.fromEntries(['q','type','client','goal','status'].map((key) => [key,form.elements.namedItem(key)]));
   const count = document.querySelector('#result-count');
   const empty = document.querySelector('#empty-state');

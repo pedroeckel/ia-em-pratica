@@ -33,3 +33,7 @@ A infraestrutura não executa automaticamente servidores MCP, instaladores ou ho
 ## Manutenção e retirada
 
 Reveja entradas após mudança de versão, quebra de instrução, fim da licença aplicável ou relato fundamentado. Registre resultado, preserve o histórico e informe o substituto quando existir. Antes de uma aula, confira a edição usada e fixe a versão dos materiais. Não reescreva um teste reprovado como aprovado; registre correção e nova rodada.
+
+## Superfícies com relógios diferentes
+
+O site recalcula a revisão ao abrir tanto o catálogo quanto os detalhes, sem depender de um novo deploy. O índice Markdown é um instantâneo versionado: declara a data de referência da edição e calcula a situação nessa data, preservando a data do teste. Para o estado atual, aponta ao site. Isso mantém o índice reproduzível e não o apresenta como um relógio ativo no GitHub. Um novo release usa a data da nova edição e recalcula o instantâneo.

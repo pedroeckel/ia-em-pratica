@@ -19,7 +19,7 @@
   },
   "environment": {
     "POETRY_VIRTUALENVS_IN_PROJECT": "true",
-    "PYTHONPYCACHEPREFIX": "/private/tmp/carrinho-rodada2-pycache-2att2q10"
+    "PYTHONPYCACHEPREFIX": "<diretorio-temporario>/carrinho-rodada2-pycache-2att2q10"
   },
   "records": [
     {

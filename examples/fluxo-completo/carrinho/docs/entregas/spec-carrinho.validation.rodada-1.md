@@ -24,7 +24,7 @@ a verificação pertinente; a execução atual não concede aprovação da SPEC.
   anteriores. A existência desses arquivos foi observada no inventário, sem leitura.
 - Não foram alterados código, testes, SPEC ou skills. A escrita restringiu-se a este
   relatório e às evidências adicionais autorizadas. Não houve commit, publicação
-  nem delegação adicional. As mutações ocorreram exclusivamente em `/private/tmp`.
+  nem delegação adicional. As mutações ocorreram exclusivamente em `<diretorio-temporario>`.
 
 ## Resultados normativos e cobertura reconstruída
 
@@ -85,7 +85,7 @@ não há dependência a adicionar. Os 26 métodos incluem subtestes; não repres
 ## Sensor de discriminação
 
 Foram copiadas as versões efetivamente avaliadas dos 13 arquivos rastreados para
-`/private/tmp/carrinho-sensor-independente-sg169vvu`. Cada cenário começou de uma
+`<diretorio-temporario>/carrinho-sensor-independente-sg169vvu`. Cada cenário começou de uma
 cópia própria sem mutação, comparada por SHA-256 com a árvore limpa. O interpretador
 foi o mesmo `.venv/bin/python` do projeto, sem instalar dependências. O código e os
 testes importados vieram das cópias: o runner confirmou `carrinho.__file__` e os

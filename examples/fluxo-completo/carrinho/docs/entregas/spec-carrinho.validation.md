@@ -72,7 +72,7 @@ e a governança:15–20 mantêm esses vínculos. Não há critério sem evidênc
 
 Execução da raiz do projeto, em Poetry 2.2.1 e Python 3.13.0 do `.venv` local,
 com `POETRY_VIRTUALENVS_IN_PROJECT=true`. O import real foi confirmado em
-`<raiz>/carrinho.py`; o cache da compilação foi direcionado a `/private/tmp`.
+`<raiz>/carrinho.py`; o cache da compilação foi direcionado a `<diretorio-temporario>`.
 
 | Comando / revisão | Código | Resultado |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ A contagem de 26 métodos inclui subtestes e não representa todas as entradas t
 ## Sensor independente da rodada 2
 
 Uma nova cópia temporária foi criada em
-`/private/tmp/carrinho-rodada2-sensor-pskwa66f`. Cada cenário partiu dos arquivos
+`<diretorio-temporario>/carrinho-rodada2-sensor-pskwa66f`. Cada cenário partiu dos arquivos
 atuais, comparados por SHA-256 antes da mutação, incluindo o sidecar não rastreado
 existente. A baseline sem mutação executou os mesmos 26 métodos com sucesso.
 

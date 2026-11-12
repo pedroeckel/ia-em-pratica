@@ -39,6 +39,7 @@ test('configuração rejeita canônica insegura e destino de repositório invál
  const {validateConfig}=await import('../scripts/lib/catalog.mjs');
  const config=JSON.parse(await readFile(safePath(repoRoot,'catalog/config.json'),'utf8'));
  assert.throws(()=>validateConfig({...config,repository:'../outro'}));
+ assert.throws(()=>validateConfig({...config,releasedAt:'2026-02-30'}));
  assert.throws(()=>validateConfig({...config,siteUrl:'javascript:alert(1)'}));
  assert.throws(()=>validateConfig({...config,siteUrl:'https://example.com/\" onclick=\"evil'}));
 });
