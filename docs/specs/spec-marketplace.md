@@ -29,8 +29,8 @@ A publicação ocorre após revisão local, em repositório novo. Nenhum arquivo
 
 - T1: catálogo com três skills próprias, formato extensível a MCP/plugin, origem/licenças e exercício sanitizado. Validador, 10 testes de contrato e regressão do exemplo aprovados. Nenhum terceiro publicado.
 - T2: instalador sem dependências de runtime, com escopos, simulação, integridade e conflitos explícitos; ZIPs com checksums. Oito testes do instalador e um de empacotamento aprovados.
-- T3: catálogo e guias estáticos, busca/filtros e URLs compartilháveis, HTML sem JS, cópia de comandos e interface responsiva. Seis testes de busca/renderização e smoke de navegador aprovados; publicação ainda pendente.
-- T4: workflows fixados a commits oficiais, matriz Linux/Windows, deploy condicionado aos testes, documentação de uso e curadoria, formulários e manifesto Claude validados localmente. Revisão independente e execução do CI remoto ainda pendentes.
+- T3: catálogo e guias estáticos, busca/filtros e URLs compartilháveis, HTML sem JS, cópia de comandos e interface responsiva. Oito testes de busca/renderização e smoke de navegador aprovados; publicação condicionada ao CI da main.
+- T4: workflows fixados a commits oficiais, matriz Linux/Windows, deploy condicionado aos testes, documentação de uso e curadoria, formulários e manifesto Claude validados localmente. Revisão independente local aprovada. A matriz remota do PR da correção também passou; o deploy é exclusivo da main.
 
 ## Correções após revisão independente
 
@@ -40,4 +40,4 @@ A primeira rodada encontrou vencimento não atualizado no detalhe e caminhos tem
 
 ## Correção identificada no CI remoto
 
-A [primeira execução da main](https://github.com/pedroeckel/ia-em-pratica/actions/runs/43215735497) reprovou três testes de instalação no Node recente: `fs.cp` com `errorOnExist` recusou a pasta de destino que o instalador acabava de reservar. A cópia final agora usa cada arquivo do inventário com `COPYFILE_EXCL`; mantém a reserva, a proteção de conflitos e a comparação dos hashes. A revisão e o CI dessa correção devem passar antes da release.
+A [primeira execução da main](https://github.com/pedroeckel/ia-em-pratica/actions/runs/43215735497) reprovou três testes de instalação no Node recente: `fs.cp` com `errorOnExist` recusou a pasta de destino que o instalador acabava de reservar. A cópia final agora usa cada arquivo do inventário com `COPYFILE_EXCL`; mantém a reserva, a proteção de conflitos e a comparação dos hashes. A matriz completa passou no [PR da correção](https://github.com/pedroeckel/ia-em-pratica/actions/runs/43216446337), com Node 22/24 em Linux e Node 22 em Windows, incluindo a regressão Python. Build/deploy foram corretamente omitidos por ser PR. A [revisão independente focal](../validacao-ci-instalador.md) aprovou o delta. A publicação da main é acompanhada no pipeline e na release.
