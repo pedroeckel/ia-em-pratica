@@ -1,0 +1,52 @@
+{
+  "id": "nome-do-recurso",
+  "type": "mcp",
+  "title": "Nome do recurso",
+  "summary": "Descreva a tarefa que ele resolve.",
+  "outcome": "Descreva o resultado observável para o aluno.",
+  "provider": "Nome do fornecedor",
+  "ownership": "terceiro",
+  "url": "https://example.com/ferramenta",
+  "license": "Confirme a licença ou os termos upstream",
+  "skillPath": null,
+  "level": "intermediario",
+  "goals": [
+    "integracoes"
+  ],
+  "clients": [
+    "codex",
+    "claude-code"
+  ],
+  "compatibility": {
+    "codex": "Registre se foi testado ou apenas documentado.",
+    "claude-code": "Registre se foi testado ou apenas documentado."
+  },
+  "validation": {
+    "status": "em-avaliacao",
+    "date": null,
+    "version": null,
+    "environment": "Ainda não executado.",
+    "scope": "Proposta a revisar.",
+    "limitations": "Não recebeu validação.",
+    "evidence": null,
+    "reviewAfterDays": 90,
+    "contentSha256": null
+  },
+  "setup": {
+    "requirements": [
+      "Descreva requisitos, conta/plano e permissões."
+    ],
+    "steps": [
+      {
+        "text": "Descreva a instalação pela fonte oficial, sem credenciais.",
+        "code": null
+      }
+    ],
+    "verify": "Descreva um caso mínimo e seu resultado esperado.",
+    "uninstall": "Descreva como remover a integração e revogar as permissões concedidas."
+  },
+  "prompt": null,
+  "tags": [
+    "integração"
+  ]
+}

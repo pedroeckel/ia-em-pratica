@@ -1,0 +1,9 @@
+--- a/carrinho.py
++++ b/carrinho.py
+@@ -40,5 +40,5 @@
+     valor_subtotal = subtotal(itens)
+     desconto = (valor_subtotal * desconto_percentual + 50) // 100
+     base_frete = valor_subtotal - desconto
+-    frete = 1000 if itens and base_frete < 10000 else 0
++    frete = 1000 if itens and base_frete <= 10000 else 0
+     return Resumo(valor_subtotal, desconto, frete, base_frete + frete)

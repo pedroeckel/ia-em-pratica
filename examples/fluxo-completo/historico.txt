@@ -1,0 +1,8 @@
+0dae032 chore: prepara projeto de exemplo do carrinho
+a5a7b39 docs: define PRD do resumo de carrinho
+0997014 docs: deriva SPEC do resumo de carrinho
+cd7c5a6 feat(carrinho): adiciona subtotal com validação de itens
+d8cb76b feat(carrinho): calcula desconto frete e total em centavos
+ac28fc8 test(carrinho): verifica preservação dos valores dos itens
+4cd0cd5 docs: preserva primeira revisão e alinha estado da SPEC
+e35ebe3 docs: registra aprovação técnica da segunda rodada

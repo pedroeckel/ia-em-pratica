@@ -1,0 +1,33 @@
+comando: poetry run python -m unittest discover -s tests -v
+exit: 1
+test_resumo (unittest.loader._FailedTest.test_resumo) ... ERROR
+test_lista_vazia (test_subtotal.SubtotalTests.test_lista_vazia) ... ok
+test_preco_zero_permitido (test_subtotal.SubtotalTests.test_preco_zero_permitido) ... ok
+test_preserva_lista_e_itens_no_erro (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_erro) ... ok
+test_preserva_lista_e_itens_no_sucesso (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_sucesso) ... ok
+test_preserva_precisao_inteira (test_subtotal.SubtotalTests.test_preserva_precisao_inteira) ... ok
+test_rejeita_colecao_invalida (test_subtotal.SubtotalTests.test_rejeita_colecao_invalida) ... ok
+test_rejeita_elemento_invalido (test_subtotal.SubtotalTests.test_rejeita_elemento_invalido) ... ok
+test_rejeita_preco_invalido (test_subtotal.SubtotalTests.test_rejeita_preco_invalido) ... ok
+test_rejeita_quantidade_invalida (test_subtotal.SubtotalTests.test_rejeita_quantidade_invalida) ... ok
+test_soma_precos_e_quantidades (test_subtotal.SubtotalTests.test_soma_precos_e_quantidades) ... ok
+
+======================================================================
+ERROR: test_resumo (unittest.loader._FailedTest.test_resumo)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_resumo
+Traceback (most recent call last):
+  File "<python-do-exercicio>/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "<python-do-exercicio>/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "<diretorio-do-exemplo>/carrinho/tests/test_resumo.py", line 3, in <module>
+    from carrinho import Item, Resumo, calcular_total
+ImportError: cannot import name 'Resumo' from 'carrinho' (<diretorio-do-exemplo>/carrinho/carrinho.py)
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+FAILED (errors=1)

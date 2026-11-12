@@ -1,0 +1,125 @@
+{
+  "environment": {
+    "POETRY_VIRTUALENVS_IN_PROJECT": "true",
+    "PYTHONPYCACHEPREFIX": "/private/tmp/carrinho-verificador-pycache-bq31meuz"
+  },
+  "records": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "## feat/spec-carrinho\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "d8cb76b8e4cd020b9194820e021aabdaaadb622e\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "--version"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "Poetry (version 2.2.1)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "run",
+        "python",
+        "-c",
+        "import sys,carrinho; print(sys.version); print(sys.executable); print(carrinho.__file__)"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "3.13.0 (main, Mar 10 2025, 16:19:39) [Clang 16.0.0 (clang-1600.0.26.6)]\n<diretorio-do-exemplo>/carrinho/.venv/bin/python\n<diretorio-do-exemplo>/carrinho/carrinho.py\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "run",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "carrinho.py",
+        "tests"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "0997014..d8cb76b"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "run",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": "test_arredondamento_abaixo_no_meio_e_acima (test_resumo.ResumoTests.test_arredondamento_abaixo_no_meio_e_acima) ... ok\ntest_base_descontada_exatamente_no_limiar (test_resumo.ResumoTests.test_base_descontada_exatamente_no_limiar) ... ok\ntest_desconto_calculado_uma_vez_sobre_subtotal (test_resumo.ResumoTests.test_desconto_calculado_uma_vez_sobre_subtotal) ... ok\ntest_desconto_e_parcelas_do_resumo (test_resumo.ResumoTests.test_desconto_e_parcelas_do_resumo) ... ok\ntest_desconto_maximo_e_meio_centavo_para_cima (test_resumo.ResumoTests.test_desconto_maximo_e_meio_centavo_para_cima) ... ok\ntest_desconto_pode_retornar_a_frete_pago (test_resumo.ResumoTests.test_desconto_pode_retornar_a_frete_pago) ... ok\ntest_frete_abaixo_no_limiar_e_acima (test_resumo.ResumoTests.test_frete_abaixo_no_limiar_e_acima) ... ok\ntest_item_de_preco_zero_nao_e_lista_vazia (test_resumo.ResumoTests.test_item_de_preco_zero_nao_e_lista_vazia) ... ok\ntest_preserva_lista_e_itens_no_erro_de_item (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_erro_de_item) ... ok\ntest_preserva_lista_e_itens_no_erro_de_percentual (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_erro_de_percentual) ... ok\ntest_preserva_lista_e_itens_no_sucesso (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_sucesso) ... ok\ntest_preserva_precisao_acima_de_limite_de_float (test_resumo.ResumoTests.test_preserva_precisao_acima_de_limite_de_float) ... ok\ntest_rejeita_desconto_invalido_inclusive_em_vazio (test_resumo.ResumoTests.test_rejeita_desconto_invalido_inclusive_em_vazio) ... ok\ntest_rejeita_entrada_invalida_na_fronteira_do_resumo (test_resumo.ResumoTests.test_rejeita_entrada_invalida_na_fronteira_do_resumo) ... ok\ntest_sem_desconto_por_padrao (test_resumo.ResumoTests.test_sem_desconto_por_padrao) ... ok\ntest_vazio_produz_todas_parcelas_zero (test_resumo.ResumoTests.test_vazio_produz_todas_parcelas_zero) ... ok\ntest_lista_vazia (test_subtotal.SubtotalTests.test_lista_vazia) ... ok\ntest_preco_zero_permitido (test_subtotal.SubtotalTests.test_preco_zero_permitido) ... ok\ntest_preserva_lista_e_itens_no_erro (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_erro) ... ok\ntest_preserva_lista_e_itens_no_sucesso (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_sucesso) ... ok\ntest_preserva_precisao_inteira (test_subtotal.SubtotalTests.test_preserva_precisao_inteira) ... ok\ntest_rejeita_colecao_invalida (test_subtotal.SubtotalTests.test_rejeita_colecao_invalida) ... ok\ntest_rejeita_elemento_invalido (test_subtotal.SubtotalTests.test_rejeita_elemento_invalido) ... ok\ntest_rejeita_preco_invalido (test_subtotal.SubtotalTests.test_rejeita_preco_invalido) ... ok\ntest_rejeita_quantidade_invalida (test_subtotal.SubtotalTests.test_rejeita_quantidade_invalida) ... ok\ntest_soma_precos_e_quantidades (test_subtotal.SubtotalTests.test_soma_precos_e_quantidades) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tracked_sha256": {
+    ".gitignore": "472f568478bff9056ec56b5c5e8a7ca3d280c651d527321e1eb80892801164be",
+    "AGENTS.md": "dce833a0aebd847539e78111d66195e1e1138d92b33eb3e4681d82d70aa0be92",
+    "README.md": "d39ebece04e5c1576a481e2e962394e87104262927636b926ae21548182204a9",
+    "brief.md": "cc4c0dbf705cbf261df55edfc1ac649e9c6dba423c3eef80df66809ea3af16c3",
+    "carrinho.py": "c97f40f1549d2b7accf3b2640ec1b44a8cf376c646fe5a2ba2df444cb08a8bb5",
+    "docs/README.md": "1058c6761323365c54ac3791fb81933531e96372a52df57b40df03af77b0b24e",
+    "docs/entregas/spec-carrinho.md": "05a43c68ac89aac64074ea937e6f63b6b8642fbb5ab892a0d66da5e0df4d0faa",
+    "docs/governanca.md": "979be0487a293162024be0d63d93d9564c86ec73687232dac060020e2d009b09",
+    "docs/produto/prd-carrinho.md": "bb16d8ad95372561fa0926d44a4429db4e53da74aec157adf9b3c8547d3d1f85",
+    "poetry.lock": "02594832a86775b7ba3337876dac177120faf0b818c8a49babcd646b82671c7d",
+    "pyproject.toml": "6bd32be70af197a04aa5ec4cae07cc79971ad9bb34c7d29c2e39e12c7e9a3bba",
+    "tests/test_resumo.py": "eaecc9468f289857180becc66916bae15f7bfc24c956ebb32729ce4ec9f9dccb",
+    "tests/test_subtotal.py": "7b89ef5367638c7dadc9d481f4abce53e9b050d3b15ece2807e01fd1fcf85eba"
+  }
+}

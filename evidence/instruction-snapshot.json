@@ -1,0 +1,23 @@
+{
+  "criar-prd": {
+    "bodySha256": "e081841e793fb2239acefe3c6ab3b0df2e915a05c028f58990a493757ae25539",
+    "references": {
+      "estrutura-prd.md": "0ef787cae834ec0e5c50abffdd3d007cb480416207f1f16f2e50667033fad1d4",
+      "perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50"
+    }
+  },
+  "criar-spec": {
+    "bodySha256": "b7f5a3bb518b16a0723c80baa3ed281fe787d3539c61504bfd39cc64510346ff",
+    "references": {
+      "estrutura-spec.md": "3f1b457f2a4d87db9a556bc921b5004cd90b3bb78425817a93d8809f643773d7",
+      "perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50"
+    }
+  },
+  "executar-spec": {
+    "bodySha256": "94f039a3061bfbb0568d679a199a9924b9a4dedeef41779f60c02d7b0858f47d",
+    "references": {
+      "execucao-e-validacao.md": "d5984315a318d8720ef0db470ae9f372cd7de77893d77fa5e95ba0600e83180a",
+      "perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50"
+    }
+  }
+}

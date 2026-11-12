@@ -1,0 +1,23 @@
+comando: poetry run python -m unittest discover -s tests -v
+exit: 1
+test_subtotal (unittest.loader._FailedTest.test_subtotal) ... ERROR
+
+======================================================================
+ERROR: test_subtotal (unittest.loader._FailedTest.test_subtotal)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_subtotal
+Traceback (most recent call last):
+  File "<python-do-exercicio>/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "<python-do-exercicio>/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "<diretorio-do-exemplo>/carrinho/tests/test_subtotal.py", line 3, in <module>
+    from carrinho import Item, subtotal
+ImportError: cannot import name 'subtotal' from 'carrinho' (<diretorio-do-exemplo>/carrinho/carrinho.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

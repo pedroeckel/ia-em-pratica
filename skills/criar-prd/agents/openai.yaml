@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar PRD"
+  short_description: "Transforma uma necessidade em PRD rastreável"
+  default_prompt: "Use $criar-prd para transformar esta necessidade em um PRD alinhado ao projeto, com escopo, requisitos e critérios de aceite."

@@ -1,0 +1,67 @@
+--- a/tests/test_subtotal.py
++++ b/tests/test_subtotal.py
+@@ -40,8 +40,11 @@
+     def test_preserva_lista_e_itens_no_sucesso(self):
+         itens = [Item(1990, 2), Item(550, 3)]
+         original = itens.copy()
++        valores_originais = [(item.preco_centavos, item.quantidade) for item in itens]
+         self.assertEqual(subtotal(itens), 5630)
+         self.assertEqual(itens, original)
++        self.assertEqual([(item.preco_centavos, item.quantidade) for item in itens],
++                         valores_originais)
+         self.assertEqual(len(itens), 2)
+         self.assertIs(itens[0], original[0])
+         self.assertIs(itens[1], original[1])
+@@ -49,9 +52,12 @@
+     def test_preserva_lista_e_itens_no_erro(self):
+         itens = [Item(1990, 2), Item(-1, 3)]
+         original = itens.copy()
++        valores_originais = [(item.preco_centavos, item.quantidade) for item in itens]
+         with self.assertRaises(ValueError):
+             subtotal(itens)
+         self.assertEqual(itens, original)
++        self.assertEqual([(item.preco_centavos, item.quantidade) for item in itens],
++                         valores_originais)
+         self.assertEqual(len(itens), 2)
+         self.assertIs(itens[0], original[0])
+         self.assertIs(itens[1], original[1])
+--- a/tests/test_resumo.py
++++ b/tests/test_resumo.py
+@@ -72,8 +72,11 @@
+     def test_preserva_lista_e_itens_no_sucesso(self):
+         itens = [Item(1990, 2), Item(550, 3)]
+         original = itens.copy()
++        valores_originais = [(item.preco_centavos, item.quantidade) for item in itens]
+         self.assertEqual(calcular_total(itens, 10), Resumo(5630, 563, 1000, 6067))
+         self.assertEqual(itens, original)
++        self.assertEqual([(item.preco_centavos, item.quantidade) for item in itens],
++                         valores_originais)
+         self.assertEqual(len(itens), 2)
+         self.assertIs(itens[0], original[0])
+         self.assertIs(itens[1], original[1])
+@@ -81,9 +84,12 @@
+     def test_preserva_lista_e_itens_no_erro_de_item(self):
+         itens = [Item(1990, 2), Item(-1, 3)]
+         original = itens.copy()
++        valores_originais = [(item.preco_centavos, item.quantidade) for item in itens]
+         with self.assertRaises(ValueError):
+             calcular_total(itens, 10)
+         self.assertEqual(itens, original)
++        self.assertEqual([(item.preco_centavos, item.quantidade) for item in itens],
++                         valores_originais)
+         self.assertEqual(len(itens), 2)
+         self.assertIs(itens[0], original[0])
+         self.assertIs(itens[1], original[1])
+@@ -91,9 +97,12 @@
+     def test_preserva_lista_e_itens_no_erro_de_percentual(self):
+         itens = [Item(1990, 2), Item(550, 3)]
+         original = itens.copy()
++        valores_originais = [(item.preco_centavos, item.quantidade) for item in itens]
+         with self.assertRaises(ValueError):
+             calcular_total(itens, 51)
+         self.assertEqual(itens, original)
++        self.assertEqual([(item.preco_centavos, item.quantidade) for item in itens],
++                         valores_originais)
+         self.assertEqual(len(itens), 2)
+         self.assertIs(itens[0], original[0])
+         self.assertIs(itens[1], original[1])

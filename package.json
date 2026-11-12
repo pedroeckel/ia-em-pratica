@@ -8,12 +8,18 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "validate": "node scripts/validate.mjs",
-    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/validate.mjs && node scripts/check-links.mjs",
+    "test": "node --test",
     "build": "node scripts/build.mjs",
     "check": "npm run validate && npm test && npm run build",
     "preview": "node scripts/serve.mjs",
-    "package": "node scripts/package.mjs"
+    "package": "node scripts/package.mjs",
+    "integrity": "node scripts/integrity.mjs"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "fflate": "0.8.3",
+    "yaml": "2.9.1"
+  }
 }

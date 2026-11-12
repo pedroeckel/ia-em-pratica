@@ -1,0 +1,27 @@
+$ poetry run python --version
+exit: 0
+Python 3.13.0
+
+$ poetry run python -m compileall -q carrinho.py tests
+exit: 0
+
+$ poetry run python -m unittest discover -s tests -v
+exit: 0
+test_lista_vazia (test_subtotal.SubtotalTests.test_lista_vazia) ... ok
+test_preco_zero_permitido (test_subtotal.SubtotalTests.test_preco_zero_permitido) ... ok
+test_preserva_lista_e_itens_no_erro (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_erro) ... ok
+test_preserva_lista_e_itens_no_sucesso (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_sucesso) ... ok
+test_preserva_precisao_inteira (test_subtotal.SubtotalTests.test_preserva_precisao_inteira) ... ok
+test_rejeita_colecao_invalida (test_subtotal.SubtotalTests.test_rejeita_colecao_invalida) ... ok
+test_rejeita_elemento_invalido (test_subtotal.SubtotalTests.test_rejeita_elemento_invalido) ... ok
+test_rejeita_preco_invalido (test_subtotal.SubtotalTests.test_rejeita_preco_invalido) ... ok
+test_rejeita_quantidade_invalida (test_subtotal.SubtotalTests.test_rejeita_quantidade_invalida) ... ok
+test_soma_precos_e_quantidades (test_subtotal.SubtotalTests.test_soma_precos_e_quantidades) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+$ git diff --check
+exit: 0

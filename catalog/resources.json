@@ -1,0 +1,199 @@
+[
+  {
+    "id": "criar-prd",
+    "type": "skill",
+    "title": "Criar um PRD",
+    "summary": "Transforme uma ideia em requisitos claros, escopo e critérios de aceite.",
+    "outcome": "Um PRD que explica o que entregar e como comprovar o resultado.",
+    "provider": "Pedro Eckel",
+    "ownership": "autoral",
+    "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/criar-prd",
+    "license": "CC-BY-4.0",
+    "skillPath": "skills/criar-prd",
+    "level": "iniciante",
+    "goals": [
+      "planejamento"
+    ],
+    "clients": [
+      "codex",
+      "claude-code"
+    ],
+    "compatibility": {
+      "codex": "Fluxo exercitado em ambiente local; veja a evidência e seus limites.",
+      "claude-code": "Formato e instalação documentados; a execução completa dentro do Claude Code ainda não foi observada."
+    },
+    "validation": {
+      "status": "testado",
+      "date": "2026-11-12",
+      "version": "1.0.0",
+      "environment": "Exercício local com agente de programação; Python 3.13.0 e Poetry 2.2.1.",
+      "scope": "Fluxo conjunto PRD → SPEC → implementação de uma biblioteca de carrinho; 8 critérios, 26 testes e 4 mutações detectadas na rodada final.",
+      "limitations": "Um exemplo pequeno, sem serviços externos. Não comprova uso em turma, compatibilidade universal ou auditoria de segurança. A versão publicada só acrescenta metadados de licença às duas primeiras skills.",
+      "evidence": "evidence/fluxo-produto.md",
+      "reviewAfterDays": 90,
+      "contentSha256": "1cd8e5616d9e4dfbc660f2000f760678811383d340d87126004d7cc21892222f"
+    },
+    "setup": {
+      "requirements": [
+        "Codex ou Claude Code local.",
+        "Node.js 22 ou superior para o instalador; alternativa manual no guia."
+      ],
+      "steps": [
+        {
+          "text": "Baixe o repositório e entre na pasta.",
+          "code": "git clone https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+        },
+        {
+          "text": "Confira o destino antes de instalar.",
+          "code": "node scripts/install.mjs --skill criar-prd --agent codex --scope user --dry-run"
+        },
+        {
+          "text": "Instale para o cliente escolhido. Para Claude Code, use --agent claude-code.",
+          "code": "node scripts/install.mjs --skill criar-prd --agent codex --scope user"
+        }
+      ],
+      "verify": "No Codex, abra a seleção de skills ou mencione $criar-prd. No Claude Code, use /criar-prd; via plugin, use /produto-para-codigo:criar-prd. Se não aparecer, confira o destino indicado pelo instalador.",
+      "uninstall": "Remova somente a pasta criar-prd do destino informado na instalação, depois de preservar eventuais edições próprias. O instalador não modifica suas configurações de MCP."
+    },
+    "prompt": "Use $criar-prd para definir um PRD de uma biblioteca de carrinho de compras. Preserve hipóteses e decisões pendentes.",
+    "tags": [
+      "prd",
+      "spec",
+      "produto",
+      "requisitos",
+      "teste",
+      "governança"
+    ]
+  },
+  {
+    "id": "criar-spec",
+    "type": "skill",
+    "title": "Derivar uma SPEC",
+    "summary": "Converta o PRD em uma entrega implementável com contratos e validação.",
+    "outcome": "Uma SPEC vinculada aos requisitos, com dependências e exemplos verificáveis.",
+    "provider": "Pedro Eckel",
+    "ownership": "autoral",
+    "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/criar-spec",
+    "license": "CC-BY-4.0",
+    "skillPath": "skills/criar-spec",
+    "level": "intermediario",
+    "goals": [
+      "planejamento"
+    ],
+    "clients": [
+      "codex",
+      "claude-code"
+    ],
+    "compatibility": {
+      "codex": "Fluxo exercitado em ambiente local; veja a evidência e seus limites.",
+      "claude-code": "Formato e instalação documentados; a execução completa dentro do Claude Code ainda não foi observada."
+    },
+    "validation": {
+      "status": "testado",
+      "date": "2026-11-12",
+      "version": "1.0.0",
+      "environment": "Exercício local com agente de programação; Python 3.13.0 e Poetry 2.2.1.",
+      "scope": "Fluxo conjunto PRD → SPEC → implementação de uma biblioteca de carrinho; 8 critérios, 26 testes e 4 mutações detectadas na rodada final.",
+      "limitations": "Um exemplo pequeno, sem serviços externos. Não comprova uso em turma, compatibilidade universal ou auditoria de segurança. A versão publicada só acrescenta metadados de licença às duas primeiras skills.",
+      "evidence": "evidence/fluxo-produto.md",
+      "reviewAfterDays": 90,
+      "contentSha256": "9bd025c2df5268f7a7d4557cccc8121321a04c9971af884c419f06466377aa8b"
+    },
+    "setup": {
+      "requirements": [
+        "Codex ou Claude Code local.",
+        "Node.js 22 ou superior para o instalador; alternativa manual no guia."
+      ],
+      "steps": [
+        {
+          "text": "Baixe o repositório e entre na pasta.",
+          "code": "git clone https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+        },
+        {
+          "text": "Confira o destino antes de instalar.",
+          "code": "node scripts/install.mjs --skill criar-spec --agent codex --scope user --dry-run"
+        },
+        {
+          "text": "Instale para o cliente escolhido. Para Claude Code, use --agent claude-code.",
+          "code": "node scripts/install.mjs --skill criar-spec --agent codex --scope user"
+        }
+      ],
+      "verify": "No Codex, abra a seleção de skills ou mencione $criar-spec. No Claude Code, use /criar-spec; via plugin, use /produto-para-codigo:criar-spec. Se não aparecer, confira o destino indicado pelo instalador.",
+      "uninstall": "Remova somente a pasta criar-spec do destino informado na instalação, depois de preservar eventuais edições próprias. O instalador não modifica suas configurações de MCP."
+    },
+    "prompt": "Use $criar-spec para derivar uma SPEC a partir de docs/produto/prd-carrinho.md.",
+    "tags": [
+      "prd",
+      "spec",
+      "produto",
+      "requisitos",
+      "teste",
+      "governança"
+    ]
+  },
+  {
+    "id": "executar-spec",
+    "type": "skill",
+    "title": "Implementar e verificar",
+    "summary": "Execute a SPEC com tarefas pequenas, testes e revisão independente.",
+    "outcome": "Implementação e evidências dos critérios de aceite, com lacunas visíveis.",
+    "provider": "Pedro Eckel",
+    "ownership": "autoral",
+    "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/executar-spec",
+    "license": "CC-BY-4.0",
+    "skillPath": "skills/executar-spec",
+    "level": "intermediario",
+    "goals": [
+      "desenvolvimento"
+    ],
+    "clients": [
+      "codex",
+      "claude-code"
+    ],
+    "compatibility": {
+      "codex": "Fluxo exercitado em ambiente local; veja a evidência e seus limites.",
+      "claude-code": "Formato e instalação documentados; a execução completa dentro do Claude Code ainda não foi observada."
+    },
+    "validation": {
+      "status": "testado",
+      "date": "2026-11-12",
+      "version": "1.0.1",
+      "environment": "Exercício local com agente de programação; Python 3.13.0 e Poetry 2.2.1.",
+      "scope": "Fluxo conjunto PRD → SPEC → implementação de uma biblioteca de carrinho; 8 critérios, 26 testes e 4 mutações detectadas na rodada final.",
+      "limitations": "Um exemplo pequeno, sem serviços externos. Não comprova uso em turma, compatibilidade universal ou auditoria de segurança. A versão publicada só acrescenta metadados de licença às duas primeiras skills.",
+      "evidence": "evidence/fluxo-produto.md",
+      "reviewAfterDays": 90,
+      "contentSha256": "dab4642d0b0142c448916dda578fd7e4245b484c5305d2c8f13d4ebd407d076e"
+    },
+    "setup": {
+      "requirements": [
+        "Codex ou Claude Code local.",
+        "Node.js 22 ou superior para o instalador; alternativa manual no guia."
+      ],
+      "steps": [
+        {
+          "text": "Baixe o repositório e entre na pasta.",
+          "code": "git clone https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+        },
+        {
+          "text": "Confira o destino antes de instalar.",
+          "code": "node scripts/install.mjs --skill executar-spec --agent codex --scope user --dry-run"
+        },
+        {
+          "text": "Instale para o cliente escolhido. Para Claude Code, use --agent claude-code.",
+          "code": "node scripts/install.mjs --skill executar-spec --agent codex --scope user"
+        }
+      ],
+      "verify": "No Codex, abra a seleção de skills ou mencione $executar-spec. No Claude Code, use /executar-spec; via plugin, use /produto-para-codigo:executar-spec. Se não aparecer, confira o destino indicado pelo instalador.",
+      "uninstall": "Remova somente a pasta executar-spec do destino informado na instalação, depois de preservar eventuais edições próprias. O instalador não modifica suas configurações de MCP."
+    },
+    "prompt": "Use $executar-spec para implementar docs/entregas/spec-carrinho.md. Trabalhe no repositório do exercício.",
+    "tags": [
+      "spec",
+      "implementação",
+      "testes",
+      "verificação",
+      "código"
+    ]
+  }
+]

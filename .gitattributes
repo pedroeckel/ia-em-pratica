@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.zip binary
+*.png binary
+*.jpg binary
+
+# Unified-diff evidence preserves whitespace in context lines.
+examples/fluxo-completo/evidencias/*.diff -whitespace

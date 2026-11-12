@@ -21,7 +21,7 @@ Uma lista de links não responde se um recurso ajuda na tarefa, funciona no ambi
 
 ## Escopo e exclusões
 
-Inclui catálogo público, três skills próprias, candidatos externos identificados, instalador, conteúdo de início, exercícios, contribuição e publicação GitHub Pages. Não inclui pagamentos, contas, ranking por popularidade, promessa de compatibilidade universal ou operação automática de integrações.
+Inclui catálogo público, três skills próprias, estrutura para futuros recursos externos, instalador, conteúdo de início, exercícios, contribuição e publicação GitHub Pages. Não inclui pagamentos, contas, ranking por popularidade, promessa de compatibilidade universal ou operação automática de integrações.
 
 ## Métricas e decisões
 

@@ -1,0 +1,82 @@
+{
+  "head": "4cd0cd507a4df1c875752032d862828e7af36e56",
+  "tracked_count": 14,
+  "tracked_files_unchanged": true,
+  "round1_sha256": "aa72725670fc279c145ce1fa141d282f1f4385cad1e9841a070e529a2ed92479",
+  "requirements": [
+    "CAR-REQ-01",
+    "CAR-REQ-02",
+    "CAR-REQ-03",
+    "CAR-REQ-04",
+    "CAR-REQ-05",
+    "CAR-REQ-06"
+  ],
+  "criteria": [
+    "CAR-AC-01",
+    "CAR-AC-02",
+    "CAR-AC-03",
+    "CAR-AC-04",
+    "CAR-AC-05",
+    "CAR-AC-06",
+    "CAR-AC-07",
+    "CAR-AC-08"
+  ],
+  "links": [
+    {
+      "source": "README.md",
+      "target": "brief.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/README.md",
+      "target": "../brief.md",
+      "exists": true
+    },
+    {
+      "source": "docs/README.md",
+      "target": "produto/prd-carrinho.md",
+      "exists": true
+    },
+    {
+      "source": "docs/README.md",
+      "target": "entregas/spec-carrinho.md",
+      "exists": true
+    },
+    {
+      "source": "docs/README.md",
+      "target": "governanca.md",
+      "exists": true
+    },
+    {
+      "source": "docs/produto/prd-carrinho.md",
+      "target": "../../brief.md",
+      "exists": true
+    },
+    {
+      "source": "docs/produto/prd-carrinho.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/produto/prd-carrinho.md",
+      "target": "../governanca.md",
+      "exists": true
+    },
+    {
+      "source": "docs/entregas/spec-carrinho.md",
+      "target": "../produto/prd-carrinho.md",
+      "exists": true
+    },
+    {
+      "source": "docs/entregas/spec-carrinho.md",
+      "target": "../../brief.md",
+      "exists": true
+    }
+  ],
+  "source_implementation_unchanged_since": "d8cb76b"
+}

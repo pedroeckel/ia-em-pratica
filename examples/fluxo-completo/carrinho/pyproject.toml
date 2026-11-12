@@ -1,0 +1,9 @@
+[project]
+name = "carrinho-exemplo"
+version = "0.1.0"
+description = "Biblioteca de exemplo para validação de um fluxo PRD-SPEC"
+requires-python = ">=3.12,<4.0"
+dependencies = []
+
+[tool.poetry]
+package-mode = false

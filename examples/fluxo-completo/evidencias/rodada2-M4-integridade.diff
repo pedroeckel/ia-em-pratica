@@ -1,0 +1,10 @@
+--- a/carrinho.py
++++ b/carrinho.py
+@@ -23,6 +23,7 @@
+         if not _inteiro(item.quantidade) or item.quantidade <= 0:
+             raise ValueError("Quantidade deve ser inteiro positivo")
+         resultado += item.preco_centavos * item.quantidade
++        object.__setattr__(item, "preco_centavos", 0)
+     return resultado
+ 
+ 

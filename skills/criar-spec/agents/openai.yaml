@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar SPEC a partir do PRD"
+  short_description: "Deriva SPECs verificáveis de um PRD existente"
+  default_prompt: "Use $criar-spec para desdobrar este PRD em SPECs rastreáveis, com dependências, critérios de aceite e plano de validação."

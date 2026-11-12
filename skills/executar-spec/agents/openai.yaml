@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executar SPEC"
+  short_description: "Implementa uma SPEC com testes e evidências"
+  default_prompt: "Use $executar-spec para implementar esta SPEC, respeitando a governança, com tarefas atômicas, testes e verificação final."

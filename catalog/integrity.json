@@ -1,0 +1,23 @@
+{
+  "criar-prd": {
+    "agents/openai.yaml": "226c22381ed3b1f8462e0280c439ca58058c5c9854984daa956da8f15e57b2b5",
+    "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
+    "references/estrutura-prd.md": "0ef787cae834ec0e5c50abffdd3d007cb480416207f1f16f2e50667033fad1d4",
+    "references/perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50",
+    "SKILL.md": "589f1c526193865fdb9e70a4b5f0fde39df8da91bf70070cde85266c43e30d81"
+  },
+  "criar-spec": {
+    "agents/openai.yaml": "221ac5b56581296571f9a7deda20fe076bf3ded986eb99a2faf3dc6b3a47a453",
+    "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
+    "references/estrutura-spec.md": "3f1b457f2a4d87db9a556bc921b5004cd90b3bb78425817a93d8809f643773d7",
+    "references/perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50",
+    "SKILL.md": "0fe02dd18b7757f921674740bd58fb3e7618eb2ece8b26ea783b4d3b3b933497"
+  },
+  "executar-spec": {
+    "agents/openai.yaml": "b7af8ce5beb5a7a7cf402bb87b757da8cad2f997d6b4183a885bbe8b60169d1f",
+    "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
+    "references/execucao-e-validacao.md": "d5984315a318d8720ef0db470ae9f372cd7de77893d77fa5e95ba0600e83180a",
+    "references/perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50",
+    "SKILL.md": "d3e33003c8521023ede47b5473c2206046b661a7ed385b945ae342e6642ce195"
+  }
+}

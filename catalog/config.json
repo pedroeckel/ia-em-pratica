@@ -1,0 +1,12 @@
+{
+  "name": "IA em Prática",
+  "repository": "pedroeckel/ia-em-pratica",
+  "version": "0.1.0",
+  "description": "Skills, MCPs e plugins para aprender IA fazendo.",
+  "maintainer": {
+    "name": "Pedro Eckel",
+    "github": "pedroeckel"
+  },
+  "siteUrl": "https://pedroeckel.github.io/ia-em-pratica/",
+  "releasedAt": "2026-11-12"
+}

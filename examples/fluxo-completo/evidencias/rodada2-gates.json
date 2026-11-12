@@ -1,0 +1,105 @@
+{
+  "head": "4cd0cd507a4df1c875752032d862828e7af36e56",
+  "initial_status": "## feat/spec-carrinho\n?? docs/entregas/spec-carrinho.validation.md\n",
+  "tracked_sha256": {
+    ".gitignore": "472f568478bff9056ec56b5c5e8a7ca3d280c651d527321e1eb80892801164be",
+    "AGENTS.md": "dce833a0aebd847539e78111d66195e1e1138d92b33eb3e4681d82d70aa0be92",
+    "README.md": "d39ebece04e5c1576a481e2e962394e87104262927636b926ae21548182204a9",
+    "brief.md": "cc4c0dbf705cbf261df55edfc1ac649e9c6dba423c3eef80df66809ea3af16c3",
+    "carrinho.py": "c97f40f1549d2b7accf3b2640ec1b44a8cf376c646fe5a2ba2df444cb08a8bb5",
+    "docs/README.md": "d93d82c79d699d750695d61a61bffb87e648a632158580515c0f4b2abe65fa0f",
+    "docs/entregas/spec-carrinho.md": "f8283d5e62cf7adb46dc0200ef73352059538699c7b473eeeb530283fb2a4aad",
+    "docs/entregas/spec-carrinho.validation.rodada-1.md": "aa72725670fc279c145ce1fa141d282f1f4385cad1e9841a070e529a2ed92479",
+    "docs/governanca.md": "c0e06cd8391edbc4ef220f75acf2748367c6d8819efdd13f083584814aa03470",
+    "docs/produto/prd-carrinho.md": "bb16d8ad95372561fa0926d44a4429db4e53da74aec157adf9b3c8547d3d1f85",
+    "poetry.lock": "02594832a86775b7ba3337876dac177120faf0b818c8a49babcd646b82671c7d",
+    "pyproject.toml": "6bd32be70af197a04aa5ec4cae07cc79971ad9bb34c7d29c2e39e12c7e9a3bba",
+    "tests/test_resumo.py": "e5a6e49985a3fed8d46cedcdc9ea463b81d40008b6d72a10ecf3b87c938fa81f",
+    "tests/test_subtotal.py": "9c91c64b1640ee835e939158ff4d9ebab20423fd1f28c169e1bb90041ab8613e"
+  },
+  "environment": {
+    "POETRY_VIRTUALENVS_IN_PROJECT": "true",
+    "PYTHONPYCACHEPREFIX": "/private/tmp/carrinho-rodada2-pycache-2att2q10"
+  },
+  "records": [
+    {
+      "command": [
+        "poetry",
+        "--version"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "Poetry (version 2.2.1)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "run",
+        "python",
+        "-c",
+        "import sys,carrinho; print(sys.version); print(sys.executable); print(carrinho.__file__)"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "3.13.0 (main, Mar 10 2025, 16:19:39) [Clang 16.0.0 (clang-1600.0.26.6)]\n<diretorio-do-exemplo>/carrinho/.venv/bin/python\n<diretorio-do-exemplo>/carrinho/carrinho.py\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "run",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "carrinho.py",
+        "tests"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "0997014..4cd0cd5"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "poetry",
+        "run",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": "test_arredondamento_abaixo_no_meio_e_acima (test_resumo.ResumoTests.test_arredondamento_abaixo_no_meio_e_acima) ... ok\ntest_base_descontada_exatamente_no_limiar (test_resumo.ResumoTests.test_base_descontada_exatamente_no_limiar) ... ok\ntest_desconto_calculado_uma_vez_sobre_subtotal (test_resumo.ResumoTests.test_desconto_calculado_uma_vez_sobre_subtotal) ... ok\ntest_desconto_e_parcelas_do_resumo (test_resumo.ResumoTests.test_desconto_e_parcelas_do_resumo) ... ok\ntest_desconto_maximo_e_meio_centavo_para_cima (test_resumo.ResumoTests.test_desconto_maximo_e_meio_centavo_para_cima) ... ok\ntest_desconto_pode_retornar_a_frete_pago (test_resumo.ResumoTests.test_desconto_pode_retornar_a_frete_pago) ... ok\ntest_frete_abaixo_no_limiar_e_acima (test_resumo.ResumoTests.test_frete_abaixo_no_limiar_e_acima) ... ok\ntest_item_de_preco_zero_nao_e_lista_vazia (test_resumo.ResumoTests.test_item_de_preco_zero_nao_e_lista_vazia) ... ok\ntest_preserva_lista_e_itens_no_erro_de_item (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_erro_de_item) ... ok\ntest_preserva_lista_e_itens_no_erro_de_percentual (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_erro_de_percentual) ... ok\ntest_preserva_lista_e_itens_no_sucesso (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_sucesso) ... ok\ntest_preserva_precisao_acima_de_limite_de_float (test_resumo.ResumoTests.test_preserva_precisao_acima_de_limite_de_float) ... ok\ntest_rejeita_desconto_invalido_inclusive_em_vazio (test_resumo.ResumoTests.test_rejeita_desconto_invalido_inclusive_em_vazio) ... ok\ntest_rejeita_entrada_invalida_na_fronteira_do_resumo (test_resumo.ResumoTests.test_rejeita_entrada_invalida_na_fronteira_do_resumo) ... ok\ntest_sem_desconto_por_padrao (test_resumo.ResumoTests.test_sem_desconto_por_padrao) ... ok\ntest_vazio_produz_todas_parcelas_zero (test_resumo.ResumoTests.test_vazio_produz_todas_parcelas_zero) ... ok\ntest_lista_vazia (test_subtotal.SubtotalTests.test_lista_vazia) ... ok\ntest_preco_zero_permitido (test_subtotal.SubtotalTests.test_preco_zero_permitido) ... ok\ntest_preserva_lista_e_itens_no_erro (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_erro) ... ok\ntest_preserva_lista_e_itens_no_sucesso (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_sucesso) ... ok\ntest_preserva_precisao_inteira (test_subtotal.SubtotalTests.test_preserva_precisao_inteira) ... ok\ntest_rejeita_colecao_invalida (test_subtotal.SubtotalTests.test_rejeita_colecao_invalida) ... ok\ntest_rejeita_elemento_invalido (test_subtotal.SubtotalTests.test_rejeita_elemento_invalido) ... ok\ntest_rejeita_preco_invalido (test_subtotal.SubtotalTests.test_rejeita_preco_invalido) ... ok\ntest_rejeita_quantidade_invalida (test_subtotal.SubtotalTests.test_rejeita_quantidade_invalida) ... ok\ntest_soma_precos_e_quantidades (test_subtotal.SubtotalTests.test_soma_precos_e_quantidades) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "<diretorio-do-exemplo>/carrinho",
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

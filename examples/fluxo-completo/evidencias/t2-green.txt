@@ -1,0 +1,39 @@
+$ poetry run python -m compileall -q carrinho.py tests
+exit: 0
+
+$ poetry run python -m unittest discover -s tests -v
+exit: 0
+test_arredondamento_abaixo_no_meio_e_acima (test_resumo.ResumoTests.test_arredondamento_abaixo_no_meio_e_acima) ... ok
+test_base_descontada_exatamente_no_limiar (test_resumo.ResumoTests.test_base_descontada_exatamente_no_limiar) ... ok
+test_desconto_calculado_uma_vez_sobre_subtotal (test_resumo.ResumoTests.test_desconto_calculado_uma_vez_sobre_subtotal) ... ok
+test_desconto_e_parcelas_do_resumo (test_resumo.ResumoTests.test_desconto_e_parcelas_do_resumo) ... ok
+test_desconto_maximo_e_meio_centavo_para_cima (test_resumo.ResumoTests.test_desconto_maximo_e_meio_centavo_para_cima) ... ok
+test_desconto_pode_retornar_a_frete_pago (test_resumo.ResumoTests.test_desconto_pode_retornar_a_frete_pago) ... ok
+test_frete_abaixo_no_limiar_e_acima (test_resumo.ResumoTests.test_frete_abaixo_no_limiar_e_acima) ... ok
+test_item_de_preco_zero_nao_e_lista_vazia (test_resumo.ResumoTests.test_item_de_preco_zero_nao_e_lista_vazia) ... ok
+test_preserva_lista_e_itens_no_erro_de_item (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_erro_de_item) ... ok
+test_preserva_lista_e_itens_no_erro_de_percentual (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_erro_de_percentual) ... ok
+test_preserva_lista_e_itens_no_sucesso (test_resumo.ResumoTests.test_preserva_lista_e_itens_no_sucesso) ... ok
+test_preserva_precisao_acima_de_limite_de_float (test_resumo.ResumoTests.test_preserva_precisao_acima_de_limite_de_float) ... ok
+test_rejeita_desconto_invalido_inclusive_em_vazio (test_resumo.ResumoTests.test_rejeita_desconto_invalido_inclusive_em_vazio) ... ok
+test_rejeita_entrada_invalida_na_fronteira_do_resumo (test_resumo.ResumoTests.test_rejeita_entrada_invalida_na_fronteira_do_resumo) ... ok
+test_sem_desconto_por_padrao (test_resumo.ResumoTests.test_sem_desconto_por_padrao) ... ok
+test_vazio_produz_todas_parcelas_zero (test_resumo.ResumoTests.test_vazio_produz_todas_parcelas_zero) ... ok
+test_lista_vazia (test_subtotal.SubtotalTests.test_lista_vazia) ... ok
+test_preco_zero_permitido (test_subtotal.SubtotalTests.test_preco_zero_permitido) ... ok
+test_preserva_lista_e_itens_no_erro (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_erro) ... ok
+test_preserva_lista_e_itens_no_sucesso (test_subtotal.SubtotalTests.test_preserva_lista_e_itens_no_sucesso) ... ok
+test_preserva_precisao_inteira (test_subtotal.SubtotalTests.test_preserva_precisao_inteira) ... ok
+test_rejeita_colecao_invalida (test_subtotal.SubtotalTests.test_rejeita_colecao_invalida) ... ok
+test_rejeita_elemento_invalido (test_subtotal.SubtotalTests.test_rejeita_elemento_invalido) ... ok
+test_rejeita_preco_invalido (test_subtotal.SubtotalTests.test_rejeita_preco_invalido) ... ok
+test_rejeita_quantidade_invalida (test_subtotal.SubtotalTests.test_rejeita_quantidade_invalida) ... ok
+test_soma_precos_e_quantidades (test_subtotal.SubtotalTests.test_soma_precos_e_quantidades) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+$ git diff --check
+exit: 0

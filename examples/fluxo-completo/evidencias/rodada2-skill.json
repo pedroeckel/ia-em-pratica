@@ -1,0 +1,14 @@
+{
+  "skill": {
+    "path": "<skills-instaladas>/executar-spec/SKILL.md",
+    "sha256": "d3e33003c8521023ede47b5473c2206046b661a7ed385b945ae342e6642ce195",
+    "version": "1.0.1"
+  },
+  "reference": {
+    "path": "<skills-instaladas>/executar-spec/references/execucao-e-validacao.md",
+    "sha256": "d5984315a318d8720ef0db470ae9f372cd7de77893d77fa5e95ba0600e83180a",
+    "snapshot_guidance": "   Para critérios de não mutação, capture antes da chamada um snapshot independente\n   dos valores e confira-o após sucesso e erro, além de ordem e referências. Uma\n   cópia rasa da lista compartilha os objetos: igualdade entre essas listas não\n   comprova que os campos dos objetos permaneceram intactos.",
+    "starting_line": 75
+  },
+  "review": "Orientação condicional aos critérios de não mutação; mantém sucesso, erro, valores, ordem e referências. Não exige novas dependências ou mudanças de produto."
+}

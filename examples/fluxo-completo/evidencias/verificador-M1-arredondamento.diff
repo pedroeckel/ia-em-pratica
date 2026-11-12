@@ -1,0 +1,11 @@
+--- a/carrinho.py
++++ b/carrinho.py
+@@ -38,7 +38,7 @@
+     if not _inteiro(desconto_percentual) or not 0 <= desconto_percentual <= 50:
+         raise ValueError("Desconto deve ser inteiro entre 0 e 50")
+     valor_subtotal = subtotal(itens)
+-    desconto = (valor_subtotal * desconto_percentual + 50) // 100
++    desconto = (valor_subtotal * desconto_percentual) // 100
+     base_frete = valor_subtotal - desconto
+     frete = 1000 if itens and base_frete < 10000 else 0
+     return Resumo(valor_subtotal, desconto, frete, base_frete + frete)

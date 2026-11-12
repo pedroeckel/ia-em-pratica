@@ -24,3 +24,7 @@ Status: `testado` exige versão, data, ambiente, escopo, limites e arquivo de ev
 Gates: `npm run validate`, `npm test`, `npm run build`, `git diff --check`; regressão do exemplo em seu diretório com `python3 -m unittest discover -s tests -v`. Não executar nem marcar como testadas as integrações externas candidatas. O instalador usa apenas diretórios declarados, valida hashes e recusa links simbólicos; conflitos não alteram destinos existentes.
 
 A publicação ocorre após revisão local, em repositório novo. Nenhum arquivo do Vetor será publicado. O pacote não incluirá tokens, caminhos locais ou dados de cliente. Skill e conteúdo: CC BY 4.0; infraestrutura: MIT; autoria de derivados preservada.
+
+## Execução
+
+- T1: catálogo com três skills próprias, formato extensível a MCP/plugin, origem/licenças e exercício sanitizado. Validador, 10 testes de contrato e regressão do exemplo aprovados. Nenhum terceiro publicado.

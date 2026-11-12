@@ -1,0 +1,12 @@
+{
+  "vetor_status_inalterado": true,
+  "vetor_diff_inalterado": true,
+  "arquivos_de_skills_alterados": {
+    "criar-prd": [],
+    "criar-spec": [],
+    "executar-spec": [
+      "SKILL.md",
+      "references/execucao-e-validacao.md"
+    ]
+  }
+}
