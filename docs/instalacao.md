@@ -1,5 +1,7 @@
 # Instalar e usar
 
+> Esta página instala a edição v2.0.0. Ela mantém o estado “em avaliação”: os exercícios de agente não substituem testes com usuários. Preserve suas edições antes de atualizar uma skill 1.x; o instalador recusa sobrescrever conteúdo diferente.
+
 ## Qual cliente você usa?
 
 | Cliente | Skill pessoal | Skill no projeto | Invocação |
@@ -15,7 +17,7 @@ Esses destinos são locais; não significam instalação em ChatGPT na nuvem ou 
 Requisitos: Git e Node.js 22 ou superior. Baixe a versão da aula e entre na pasta:
 
 ```sh
-git clone --branch v0.1.0 https://github.com/pedroeckel/ia-em-pratica.git
+git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git
 cd ia-em-pratica
 node scripts/install.mjs --skill all --agent codex --scope user --dry-run
 node scripts/install.mjs --skill all --agent codex --scope user
@@ -64,8 +66,8 @@ No PowerShell: `Get-FileHash .\criar-prd.zip -Algorithm SHA256`. Compare com o h
 
 ## Primeiro pedido
 
-No Codex: `Use $criar-prd para definir um PRD de uma biblioteca de carrinho de compras.`
-No Claude Code com pasta individual: `/criar-prd Defina um PRD de uma biblioteca de carrinho de compras.`
-No Claude Code com o plugin: `/produto-para-codigo:criar-prd Defina um PRD de uma biblioteca de carrinho de compras.`
+No Codex: `Use $criar-prd para organizar a criação de um guia de boas-vindas para novos funcionários da minha loja.`
+No Claude Code com pasta individual: `/criar-prd Ajude a organizar a criação de um guia de boas-vindas para novos funcionários da minha loja.`
+No Claude Code com o plugin: `/produto-para-codigo:criar-prd Ajude a organizar a criação de um guia de boas-vindas para novos funcionários da minha loja.`
 
-Continue com o [exercício completo](../examples/fluxo-completo/relatorio.md). As regras do seu repositório e as permissões reais do cliente continuam valendo.
+Continue no próprio chat com `$criar-spec` para detalhar o plano e `$executar-spec` para produzir o material. Não é necessário saber programar ou informar caminhos de arquivos. Veja os [exemplos não técnicos](../examples/fluxo-generico/README.md). O [exercício de software](../examples/fluxo-completo/relatorio.md) é uma referência histórica das versões 1.x, não um pré-requisito. As regras do seu repositório e as permissões reais do cliente continuam valendo.

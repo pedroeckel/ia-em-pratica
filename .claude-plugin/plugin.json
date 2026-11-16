@@ -1,7 +1,7 @@
 {
   "name": "produto-para-codigo",
-  "version": "0.1.0",
-  "description": "Três skills para criar PRD, derivar SPEC e implementar com evidências.",
+  "version": "2.0.0",
+  "description": "Três skills para definir uma ideia, detalhar a entrega e produzir com conferência, em trabalhos técnicos ou não técnicos.",
   "author": {
     "name": "Pedro Eckel"
   },

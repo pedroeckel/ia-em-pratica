@@ -16,8 +16,14 @@ test('texto de contribuições não vira HTML ou script executável',()=>{
 test('HTML básico contém catálogo, instruções e download sem depender de JS',()=>{
  const html=home(config,resources);assert.ok(html.includes('id="resource-criar-prd"'));
  const page=detail(config,resources[0]);assert.ok(page.includes('downloads/criar-prd.zip'));
- assert.ok(page.includes('--dry-run'));assert.ok(page.includes('Ler a evidência'));
- assert.ok(page.includes('execução completa dentro do Claude Code ainda não foi observada'));
+ assert.ok(page.includes('--dry-run'));
+ assert.ok(page.includes('Ler a evidência'));
+ const unreviewed=structuredClone(resources[0]);unreviewed.validation.evidence=null;
+ assert.ok(detail(config,unreviewed).includes('A evidência prática ainda não foi publicada'));
+ const proven=structuredClone(resources[0]);
+ Object.assign(proven.validation,{status:'testado',date:'2026-11-12',evidence:'evidence/fluxo-produto.md'});
+ assert.ok(detail(config,proven).includes('Ler a evidência'));
+ assert.ok(page.includes(escapeHtml(resources[0].compatibility['claude-code'])));
 });
 
 test('detalhe carrega contexto de validade mesmo sem formulário de busca',()=>{
@@ -30,7 +36,9 @@ test('detalhe carrega contexto de validade mesmo sem formulário de busca',()=>{
 });
 test('índice calcula vencimento na data explicitamente declarada',async()=>{
  const {markdownIndex}=await import('../scripts/lib/render.mjs');
- const index=markdownIndex(config,[resources[0]],'2027-03-01');
+ const proven=structuredClone(resources[0]);
+ Object.assign(proven.validation,{status:'testado',date:'2026-11-12'});
+ const index=markdownIndex(config,[proven],'2027-03-01');
  assert.ok(index.includes('Revisão pendente'));
  assert.ok(index.includes('2027-03-01'));
  assert.ok(index.includes('estado atual da revisão'));

@@ -1,108 +1,66 @@
 ---
 name: criar-spec
-description: "Deriva ou revisa uma ou mais SPECs a partir de um PRD existente, com rastreabilidade de requisitos, dependências, critérios de aceite e plano de validação. Use para desdobrar o PRD em entregas implementáveis, antes de executar código."
+description: "Transforma uma definição de projeto ou PRD em um plano detalhado de entrega (SPEC), com passos, materiais, regras e formas de conferir. Use para preparar a execução de trabalhos técnicos ou não técnicos."
 license: CC-BY-4.0
 metadata:
   author: "Pedro Eckel"
-  version: "1.0.0"
+  version: "2.0.0"
 ---
 
-# Criar SPEC a partir do PRD
+# Detalhar a entrega — criar SPEC
 
-Desdobre o PRD em entregas verificáveis sem expandir seu escopo. Cada SPEC deve
-explicar o resultado, seus contratos, dependências e como comprovar a conclusão.
+Transforme o que foi combinado em instruções suficientes para produzir e conferir
+a entrega. SPEC significa especificação: aqui, um plano detalhado do trabalho,
+que pode ser um material, processo, evento, serviço ou software.
 
-## 1. Localizar a origem e as regras
+## Entender o ponto de partida
 
-Leia as instruções do repositório, o PRD de origem por completo, seu índice de
-SPECs e as decisões que afetem o recorte. Carregue o controle operacional existente
-para caminhos, provedor e branches, sem tratá-lo como fonte superior à governança.
-No Vetor, leia [perfil-vetor.md](references/perfil-vetor.md).
+Use o PRD, resumo ou definição já presente na conversa, ou um documento indicado.
+Não exija que a pessoa tenha usado outra skill, conheça siglas ou informe caminhos.
+Se só houver uma ideia, organize uma definição breve com o que já se sabe e peça
+apenas a decisão que alterar o resultado. Não invente que um PRD formal existe.
 
-Se o PRD não foi nomeado, procure pelos termos do pedido e apresente a ambiguidade
-somente se houver múltiplos candidatos plausíveis. Sem PRD ou fonte equivalente
-identificável, não invente o vínculo: encaminhe a definição para `$criar-prd`.
+Respeite o escopo combinado e consulte materiais disponíveis antes de perguntar.
+Descubra o que já existe e pode ser aproveitado: textos, modelos, planilhas,
+processos ou ferramentas. Em projetos de software, examine também o código e suas
+regras. Não procure repositórios nem bibliotecas para uma entrega não técnica.
 
-Identifique o estado do PRD: rascunho, escopo aprovado, execução local autorizada,
-pendências e aceite externo. Um PRD em rascunho pode sustentar SPECs em rascunho;
-não declare o escopo aprovado por existir um documento.
+## Especificar sem complicar
 
-## 2. Inspecionar antes de decompor
+Leia [estrutura-spec.md](references/estrutura-spec.md) e escolha o detalhamento
+necessário. Mostre:
 
-Leia uma SPEC representativa, os contratos e o código que já atendam ao recorte.
-Procure componentes, bibliotecas, serviços, testes e validações reaproveitáveis.
-Use configurações, manifests e CI para descobrir os comandos reais. Se uma
-decisão depender de API ou biblioteca, confira a documentação atual por ferramentas
-de documentação ou fontes oficiais; não invente contratos ou comandos.
+- o resultado e seu formato, para quem ele será útil e o que ficará de fora;
+- as informações ou materiais de entrada e o que precisa existir ao final;
+- as regras, seções ou comportamentos que precisam ser respeitados;
+- os passos e a ordem de execução, com dependências reais;
+- como conferir cada resultado e o que fazer se faltar informação.
 
-Apresente um plano curto e um mapa de cobertura:
+Ligue cada parte do plano a uma necessidade do resumo ou PRD. Uma lista simples
+basta em projetos pequenos. Não crie uma especificação por arquivo ou etapa; divida
+somente quando houver entregas que possam ser feitas e conferidas separadamente.
 
-| Requisito do PRD | SPEC existente ou proposta | Entrega | Dependência | Situação |
-| --- | --- | --- | --- | --- |
-| ID e critério de origem | ID/caminho | Resultado verificável | SPEC, dado ou decisão | Coberto, parcial, pendente ou fora do recorte |
+Faça as escolhas de método que couberem ao assistente e explique as que afetarem
+o resultado da pessoa. Não transforme preferência técnica em pergunta obrigatória.
+Destaque sugestões como sugestões. Se faltar uma regra de negócio, dado ou escolha
+que mude a entrega, identifique a dúvida e avance somente nas partes independentes.
 
-No desdobramento completo, cubra todos os requisitos e critérios de aceite do
-PRD, ou justifique explicitamente o que permanece pendente. Num pedido parcial,
-identifique os demais como fora do recorte atual; não os exclua do produto.
+Use termos do domínio da pessoa. Inclua detalhes de código, integrações, testes
+automatizados ou infraestrutura apenas quando a entrega depender deles. Nesse caso,
+descubra as convenções existentes e confirme contratos incertos em documentação
+oficial; não invente comandos ou acrescente funcionalidades ao pedido.
 
-Prefira uma SPEC quando o resultado for coeso. Divida quando houver entregas
-independentes, contratos distintos ou dependências que exijam sequência. Não
-transforme cada arquivo ou componente em uma SPEC. Atualize uma SPEC existente
-quando ela já for a dona natural do comportamento.
+## Conferir e entregar
 
-## 3. Escrever a SPEC
+Confira se cada necessidade está atendida ou aparece como pendência explícita.
+Verifique se outra pessoa conseguiria produzir e conferir a entrega sem ter de
+adivinhar regras. Separe checagens planejadas de resultados já observados.
 
-Leia [estrutura-spec.md](references/estrutura-spec.md). Numere a partir do índice
-e dos registros existentes, preservando IDs publicados. Cada SPEC deve conter:
+Entregue o plano no chat ou no formato/local combinado. Não imponha documentos
+extras, pastas, códigos de identificação ou aprovações formais. Preserve controles
+que o projeto realmente exigir. A existência do plano não significa aprovação
+externa nem autoriza ações fora do pedido.
 
-- PRD e requisitos de origem, artefatos e fontes normativas;
-- objetivo, problema, escopo e exclusões;
-- comportamento atual e esperado, entradas, saídas e contratos;
-- regras, erros, limites e compatibilidade pertinentes ao recorte;
-- dependências técnicas e externas, com critério de desbloqueio;
-- critérios observáveis e matriz de aceite → verificação → evidência;
-- impactos documentais, riscos, pendências e sequência de execução.
-
-Descreva estados de carregamento, vazio, erro e transições para interfaces;
-grão, chaves, qualidade, proveniência e idempotência para dados; precisão,
-normalização e salvaguardas para modelagem, quando aplicáveis. Trate persistência,
-concorrência, autenticação e chamadas externas quando o comportamento depender
-delas, sem acrescentar funcionalidades que o PRD não pediu.
-
-Cada critério deve especificar condição, ação e resultado esperado. Valores
-numéricos, códigos de resposta e estados precisam de fonte ou decisão explícita.
-Uma alternativa recomendada permanece proposta até ser decidida. Se faltar uma
-decisão que mude o resultado, registre a lacuna e bloqueie somente a parte
-dependente, sem preenchê-la a partir do comportamento atual do código.
-
-## 4. Dimensionar desenho e tarefas
-
-Para uma entrega simples, mantenha abordagem e passos na própria SPEC. Crie
-sidecars de contexto, desenho e tarefas somente quando ambiguidades, alternativas,
-múltiplos componentes ou dependências justificarem a separação. Reutilize arquivos
-existentes e o padrão local. Não crie uma árvore paralela em `.specs/features/`
-se o projeto organiza execução por PRD.
-
-Se o pedido incluir desenho ou tarefas, produza-os com os contratos e comandos
-descobertos. Cada tarefa representa um resultado coeso com seus testes e
-documentos associados; não separe testes necessários para depois da conclusão.
-Se o pedido for apenas a SPEC, deixe a decomposição detalhada para a execução.
-
-## 5. Integrar, revisar e entregar
-
-Atualize os índices, vínculos e registros documentais exigidos pelo impacto.
-Mantenha cópias operacionais equivalentes nos campos normativos, se o projeto as
-exigir. Para novas regras de modelagem, descreva a mudança como proposta e planeje
-formulação normativa, código, testes e decisão no mesmo conjunto de execução;
-não altere unilateralmente a formulação efetiva nesta etapa.
-
-Valide IDs, links, cobertura dos requisitos e dos critérios de aceite, ausência
-de dependências circulares e consistência entre dependências textuais e diagramas,
-se existirem. Diferencie testes planejados de testes executados. Não crie issues,
-publique comentários ou altere status externos apenas por o provedor estar
-configurado; use a autorização vigente e registre o que faltar.
-
-Entregue os caminhos das SPECs, o mapa de cobertura, ordem de execução, documentos
-consultados e atualizados, validações e bloqueios reais. Indique `$executar-spec`
-com a SPEC inicial quando útil. Execute a próxima etapa somente se ela já fizer
-parte do pedido.
+Indique a próxima ação em linguagem comum: produzir a entrega com `$executar-spec`
+a partir deste plano. Não exija salvar um arquivo antes de continuar. Se o pedido
+incluir apenas planejamento, não comece a execução.

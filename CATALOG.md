@@ -1,9 +1,9 @@
 # Catálogo — IA em Prática
 
-Instantâneo da edição 0.1.0, com situação calculada em **2026-11-12**. Consulte o [site](https://pedroeckel.github.io/ia-em-pratica/) para o estado atual da revisão. Gerado de catalog/resources.json.
+Instantâneo da edição 2.0.0, com situação calculada em **2026-11-16**. Consulte o [site](https://pedroeckel.github.io/ia-em-pratica/) para o estado atual da revisão. Gerado de catalog/resources.json.
 
-| Recurso | Tipo | Objetivo | Situação em 2026-11-12 | Guia |
+| Recurso | Tipo | Objetivo | Situação em 2026-11-16 | Guia |
 | --- | --- | --- | --- | --- |
-| Criar um PRD | Skill | Um PRD que explica o que entregar e como comprovar o resultado. | Testado em exemplo — teste: 2026-11-12 | [Abrir](https://pedroeckel.github.io/ia-em-pratica/recursos/criar-prd/) · [Fonte](skills/criar-prd/SKILL.md) |
-| Derivar uma SPEC | Skill | Uma SPEC vinculada aos requisitos, com dependências e exemplos verificáveis. | Testado em exemplo — teste: 2026-11-12 | [Abrir](https://pedroeckel.github.io/ia-em-pratica/recursos/criar-spec/) · [Fonte](skills/criar-spec/SKILL.md) |
-| Implementar e verificar | Skill | Implementação e evidências dos critérios de aceite, com lacunas visíveis. | Testado em exemplo — teste: 2026-11-12 | [Abrir](https://pedroeckel.github.io/ia-em-pratica/recursos/executar-spec/) · [Fonte](skills/executar-spec/SKILL.md) |
+| Definir uma ideia (PRD) | Skill | Uma definição clara do projeto, com entregas, limites e dúvidas visíveis. | Em avaliação — teste: não realizado | [Abrir](https://pedroeckel.github.io/ia-em-pratica/recursos/criar-prd/) · [Fonte](skills/criar-prd/SKILL.md) |
+| Detalhar a entrega (SPEC) | Skill | Um plano de entrega que pode ser usado sem conhecer programação. | Em avaliação — teste: não realizado | [Abrir](https://pedroeckel.github.io/ia-em-pratica/recursos/criar-spec/) · [Fonte](skills/criar-spec/SKILL.md) |
+| Produzir e conferir | Skill | Uma entrega revisada, com indicação clara do que depende de dados ou ações externas. | Em avaliação — teste: não realizado | [Abrir](https://pedroeckel.github.io/ia-em-pratica/recursos/executar-spec/) · [Fonte](skills/executar-spec/SKILL.md) |

@@ -1,23 +1,20 @@
 {
   "criar-prd": {
-    "agents/openai.yaml": "226c22381ed3b1f8462e0280c439ca58058c5c9854984daa956da8f15e57b2b5",
+    "agents/openai.yaml": "651b83e33aee36f856b5ba0b988b189ea2f38222742f891faf699ffc3bb20c22",
     "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
-    "references/estrutura-prd.md": "0ef787cae834ec0e5c50abffdd3d007cb480416207f1f16f2e50667033fad1d4",
-    "references/perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50",
-    "SKILL.md": "589f1c526193865fdb9e70a4b5f0fde39df8da91bf70070cde85266c43e30d81"
+    "references/estrutura-prd.md": "0ce2eef4d33547fe462589860c1bc23b3a8edc31717457d590f38974f5b18225",
+    "SKILL.md": "7af4da2f051fb63b918411e5261a3c2fe9deb79d47b4bd7f531ed4c6105d2053"
   },
   "criar-spec": {
-    "agents/openai.yaml": "221ac5b56581296571f9a7deda20fe076bf3ded986eb99a2faf3dc6b3a47a453",
+    "agents/openai.yaml": "6cffd730912719f92fc7c674584cb0fa252d0d3b6c5bd878f7d7028debc0c108",
     "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
-    "references/estrutura-spec.md": "3f1b457f2a4d87db9a556bc921b5004cd90b3bb78425817a93d8809f643773d7",
-    "references/perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50",
-    "SKILL.md": "0fe02dd18b7757f921674740bd58fb3e7618eb2ece8b26ea783b4d3b3b933497"
+    "references/estrutura-spec.md": "ebe9d959015d039b42ebd7b405eb34062acb789366aec9e3f83f10fb7c25c7e9",
+    "SKILL.md": "04537194e64f10f7fb05736d4a2d72286c76bf62439adc9c474752449c84a68a"
   },
   "executar-spec": {
-    "agents/openai.yaml": "b7af8ce5beb5a7a7cf402bb87b757da8cad2f997d6b4183a885bbe8b60169d1f",
+    "agents/openai.yaml": "f0726d47add5853fed2b4758a68cf2bf744f5d2f47137efbdfeecb4338186f3a",
     "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
-    "references/execucao-e-validacao.md": "d5984315a318d8720ef0db470ae9f372cd7de77893d77fa5e95ba0600e83180a",
-    "references/perfil-vetor.md": "81bbbd5297f9317e38c8e287760bc024446355f2735a75e098a59cb5eebe6f50",
-    "SKILL.md": "d3e33003c8521023ede47b5473c2206046b661a7ed385b945ae342e6642ce195"
+    "references/execucao-e-validacao.md": "d1095e3dd9c2d611fa086500f98db290aef31aea622b45e6d80e7cc951b6c29c",
+    "SKILL.md": "8a17a258da3c561de74393154342072ce36f96861e79ac76512f5d8556326333"
   }
 }

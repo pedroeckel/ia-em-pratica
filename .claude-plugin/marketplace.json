@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Recursos de IA com curadoria e evidências para aprender fazendo.",
-    "version": "0.1.0"
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "produto-para-codigo",
       "source": "./",
-      "description": "Do PRD à implementação, com três skills e critérios verificáveis."
+      "description": "Defina a ideia, detalhe o plano e produza a entrega com três skills acessíveis."
     }
   ]
 }
