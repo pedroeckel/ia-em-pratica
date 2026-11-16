@@ -25,7 +25,7 @@ await writeFile(path.join(output,'404.html'),layout({config,title:'Página não 
 await writeFile(path.join(output,'catalog.json'),JSON.stringify(resources,null,2)+'\n');
 await writeFile(path.join(output,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${config.siteUrl}sitemap.xml\n`);
 await writeFile(path.join(output,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['','comecar/','curadoria/',...resources.map((r)=>`recursos/${r.id}/`)].map((route)=>`<url><loc>${config.siteUrl}${route}</loc></url>`).join('')}</urlset>`);
-await writeFile(path.join(output,'llms.txt'),`# ${config.name}\n\n${config.description}\n\n- Catálogo estruturado: ${config.siteUrl}catalog.json\n- Instalação e escopo: https://github.com/${config.repository}/blob/main/docs/instalacao.md\n- Evidências: https://github.com/${config.repository}/blob/main/evidence/fluxo-produto.md\n`);
+await writeFile(path.join(output,'llms.txt'),`# ${config.name}\n\n${config.description}\n\n- Catálogo estruturado: ${config.siteUrl}catalog.json\n- Instalação e escopo: https://github.com/${config.repository}/blob/main/docs/instalacao.md\n${[...new Set(resources.map((r)=>r.validation.evidence).filter(Boolean))].map((file)=>`- Evidência da edição: https://github.com/${config.repository}/blob/v${config.version}/${file}`).join('\n')}\n`);
 await makeArchives(resources,path.join(output,'downloads'));
 await writeFile(path.join(repoRoot,'CATALOG.md'),markdownIndex(config,resources));
 console.log(`Build estático concluído: ${resources.length} recursos, guias e downloads em dist/.`);
