@@ -2,17 +2,19 @@
 
 **Recursos de IA para aprender fazendo — com instruções, exemplos e evidências.**
 
-Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e para quem quer aplicar IA em projetos reais. A primeira edição traz três skills que formam um fluxo completo de produto e desenvolvimento.
+Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e para quem quer aplicar IA em projetos reais. As três skills organizam um fluxo de definição, planejamento e execução de trabalhos técnicos ou não técnicos.
 
-[**Explorar o catálogo →**](https://pedroeckel.github.io/ia-em-pratica/) · [Começar pelo exercício](examples/fluxo-completo/carrinho/brief.md) · [Como validamos](docs/curadoria.md) · [Catálogo no GitHub](CATALOG.md)
+> Edição 2.0.0: instruções genéricas, com exemplos fora de tecnologia. As skills permanecem em avaliação; ainda não houve teste com pessoas do público-alvo.
+
+[**Explorar o catálogo →**](https://pedroeckel.github.io/ia-em-pratica/) · [Começar pelos exemplos](examples/fluxo-generico/README.md) · [Como validamos](docs/curadoria.md) · [Catálogo no GitHub](CATALOG.md)
 
 ## O que você quer fazer?
 
 | Sua tarefa | Recurso | O que você produz |
 | --- | --- | --- |
-| Transformar uma ideia em requisitos claros | [criar-prd](skills/criar-prd/SKILL.md) | PRD com escopo, critérios de aceite e pendências |
-| Detalhar uma entrega a partir do PRD | [criar-spec](skills/criar-spec/SKILL.md) | SPEC com contratos, dependências e validação |
-| Implementar o que foi especificado | [executar-spec](skills/executar-spec/SKILL.md) | Código, testes e evidências dos critérios |
+| Organizar uma ideia | [criar-prd](skills/criar-prd/SKILL.md) | O que entregar, para quem e como conferir |
+| Planejar como produzir a entrega | [criar-spec](skills/criar-spec/SKILL.md) | Passos, materiais, regras e checagens |
+| Produzir e conferir o trabalho | [executar-spec](skills/executar-spec/SKILL.md) | Documento, planilha, material, processo ou software, conforme o pedido |
 
 **PRD** é o documento de requisitos do produto; **SPEC** detalha uma entrega e como verificá-la.
 
@@ -20,15 +22,17 @@ Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e par
 
 ## Primeiro resultado
 
-1. Abra o [guia de instalação](docs/instalacao.md) e escolha seu cliente. Crie uma pasta nova fora deste catálogo para o seu projeto.
-2. Salve nessa pasta uma cópia do [brief de carrinho](examples/fluxo-completo/carrinho/brief.md), que já contém as regras. Abra a pasta no seu cliente e use o exemplo pronto para comparar os resultados.
-3. Peça ao assistente que use `criar-prd`; siga para `criar-spec` e `executar-spec`.
-4. Compare seus documentos e testes com o [exemplo completo](examples/fluxo-completo/relatorio.md).
+1. Instale as skills seguindo o [guia](docs/instalacao.md), ou use as que já estiverem disponíveis no seu cliente.
+2. Conte uma necessidade: `Use $criar-prd para me ajudar a criar um guia de boas-vindas para os novos funcionários da minha loja. Não sei programar.`
+3. Continue na mesma conversa: `Use $criar-spec para detalhar o que combinamos em um plano.`
+4. Peça: `Use $executar-spec para produzir o material com os dados que forneci e sinalizar o que faltar.`
+
+Você pode começar de uma ideia, um plano já existente ou uma conversa anterior. Não precisa criar pastas nem conhecer as siglas. As skills orientam a IA; a instalação ainda depende de um cliente compatível. Não são um aplicativo independente.
 
 Para o Codex, com Node.js 22+ e Git instalados:
 
 ```sh
-git clone --branch v0.1.0 https://github.com/pedroeckel/ia-em-pratica.git
+git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git
 cd ia-em-pratica
 node scripts/install.mjs --skill all --agent codex --scope user --dry-run
 node scripts/install.mjs --skill all --agent codex --scope user
@@ -49,7 +53,9 @@ Depois, invoque `/produto-para-codigo:criar-prd`, `/produto-para-codigo:criar-sp
 
 ## O que foi validado
 
-O fluxo das três skills foi exercitado em uma biblioteca de carrinho: seis requisitos, oito critérios e 26 testes. Uma primeira revisão detectou uma lacuna de cobertura; a correção foi confirmada em nova rodada, com quatro erros comportamentais detectados pelos testes. [Leia a evidência e os limites](evidence/fluxo-produto.md).
+A evidência histórica abaixo se refere às versões 1.x. A revisão 2.0.0 permanece em avaliação. Dois [exercícios de agente fora de tecnologia](examples/fluxo-generico/README.md) e uma [revisão independente](evidence/fluxo-generico-2.0.0.md) foram registrados; isso não substitui teste com usuários.
+
+O fluxo anterior foi exercitado em uma biblioteca de carrinho: seis requisitos, oito critérios e 26 testes. Uma primeira revisão detectou uma lacuna de cobertura; a correção foi confirmada em nova rodada, com quatro erros comportamentais detectados pelos testes. [Leia a evidência e os limites](evidence/fluxo-produto.md).
 
 “Testado em exemplo” não significa uso comprovado em turma, auditoria de segurança ou compatibilidade universal. O catálogo distingue cliente testado de instrução apenas documentada e mostra quando a revisão fica pendente. Ainda não medimos adoção por alunos.
 

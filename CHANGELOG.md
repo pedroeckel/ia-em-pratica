@@ -1,5 +1,14 @@
 # Histórico
 
+## 2.0.0 — 2026-11-16
+
+- Reescreve as três skills para trabalhos técnicos e não técnicos, com entrada em linguagem comum e uso direto no chat.
+- Mantém os nomes de invocação e a atribuição da executar-spec; remove perfis e convenções específicos de projeto.
+- Reduz modelos e torna Git, código e verificações avançadas condicionais ao trabalho.
+- Acrescenta exemplos de guia de boas-vindas e troca de livros, com pendências e limites de autorização explícitos.
+- Atualiza metadados, catálogo, instalação, integridade e downloads; estado de curadoria permanece em avaliação.
+- A evidência antiga pertence às skills 1.x; esta edição não reivindica teste com usuários nem execução em todos os clientes.
+
 ## 0.1.0 — 2026-11-12
 
 - Primeira edição pública de IA em Prática: três skills próprias e exemplo reproduzível PRD → SPEC → implementação.

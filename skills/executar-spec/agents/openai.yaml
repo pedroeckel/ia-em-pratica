@@ -1,4 +1,4 @@
 interface:
-  display_name: "Executar SPEC"
-  short_description: "Implementa uma SPEC com testes e evidências"
-  default_prompt: "Use $executar-spec para implementar esta SPEC, respeitando a governança, com tarefas atômicas, testes e verificação final."
+  display_name: "Produzir e conferir"
+  short_description: "Executa o plano e confere o resultado combinado"
+  default_prompt: "Use $executar-spec para produzir a entrega a partir do plano desta conversa e conferir o resultado. Explique o que ficar pendente em linguagem simples."

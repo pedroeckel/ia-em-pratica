@@ -4,7 +4,16 @@ import { readFile } from 'node:fs/promises';
 import { validateCatalog, loadCatalog } from '../scripts/lib/catalog.mjs';
 import { safePath, repoRoot } from '../scripts/lib/files.mjs';
 const original = JSON.parse(await readFile(safePath(repoRoot, 'catalog/resources.json'), 'utf8'));
-const changed = (edit) => { const data = structuredClone(original); edit(data); return data; };
+const changed = (edit) => {
+  const data = structuredClone(original);
+  // A fixture exercita as exigências do selo sem atribuí-lo ao catálogo real.
+  Object.assign(data[0].validation, {
+    status: 'testado', date: '2026-11-12',
+    evidence: 'evidence/fluxo-produto.md',
+  });
+  edit(data);
+  return data;
+};
 
 test('catálogo passa no contrato e toda validação tem evidência', async () => {
   const resources = await loadCatalog();

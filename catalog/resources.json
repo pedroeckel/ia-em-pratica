@@ -2,9 +2,9 @@
   {
     "id": "criar-prd",
     "type": "skill",
-    "title": "Criar um PRD",
-    "summary": "Transforme uma ideia em requisitos claros, escopo e critérios de aceite.",
-    "outcome": "Um PRD que explica o que entregar e como comprovar o resultado.",
+    "title": "Definir uma ideia (PRD)",
+    "summary": "Organize uma ideia, explique o que precisa e combine como conferir o resultado.",
+    "outcome": "Uma definição clara do projeto, com entregas, limites e dúvidas visíveis.",
     "provider": "Pedro Eckel",
     "ownership": "autoral",
     "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/criar-prd",
@@ -19,19 +19,19 @@
       "claude-code"
     ],
     "compatibility": {
-      "codex": "Fluxo exercitado em ambiente local; veja a evidência e seus limites.",
-      "claude-code": "Formato e instalação documentados; a execução completa dentro do Claude Code ainda não foi observada."
+      "codex": "Formato compatível documentado; execução desta revisão 2.0.0 no cliente e uso por pessoas não técnicas ainda em avaliação.",
+      "claude-code": "Formato compatível documentado; execução desta revisão 2.0.0 no cliente e uso por pessoas não técnicas ainda em avaliação."
     },
     "validation": {
-      "status": "testado",
-      "date": "2026-11-12",
-      "version": "1.0.0",
-      "environment": "Exercício local com agente de programação; Python 3.13.0 e Poetry 2.2.1.",
-      "scope": "Fluxo conjunto PRD → SPEC → implementação de uma biblioteca de carrinho; 8 critérios, 26 testes e 4 mutações detectadas na rodada final.",
-      "limitations": "Um exemplo pequeno, sem serviços externos. Não comprova uso em turma, compatibilidade universal ou auditoria de segurança. A versão publicada só acrescenta metadados de licença às duas primeiras skills.",
-      "evidence": "evidence/fluxo-produto.md",
+      "status": "em-avaliacao",
+      "date": null,
+      "version": "2.0.0",
+      "environment": "Exercícios locais de agente e revisão independente das instruções em 16/11/2026; sem teste humano.",
+      "scope": "Cenário de guia de boas-vindas com as três skills e preparação de troca de livros com criar-spec e executar-spec. Conferência estrutural, do catálogo e do instalador separada dos exercícios.",
+      "limitations": "Validação estrutural não comprova facilidade de uso. A revisão 2.0.0 precisa ser exercitada nos clientes e com o público-alvo antes de receber selo de teste.",
+      "evidence": "evidence/fluxo-generico-2.0.0.md",
       "reviewAfterDays": 90,
-      "contentSha256": "1cd8e5616d9e4dfbc660f2000f760678811383d340d87126004d7cc21892222f"
+      "contentSha256": "837e2382e3788e3efd17dfd871f29528b940bdeb195b46e0b6cc086a2f2447af"
     },
     "setup": {
       "requirements": [
@@ -40,8 +40,8 @@
       ],
       "steps": [
         {
-          "text": "Baixe o repositório e entre na pasta.",
-          "code": "git clone https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+          "text": "Baixe a edição 2.0.0 do catálogo e entre na pasta.",
+          "code": "git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
         },
         {
           "text": "Confira o destino antes de instalar.",
@@ -55,28 +55,31 @@
       "verify": "No Codex, abra a seleção de skills ou mencione $criar-prd. No Claude Code, use /criar-prd; via plugin, use /produto-para-codigo:criar-prd. Se não aparecer, confira o destino indicado pelo instalador.",
       "uninstall": "Remova somente a pasta criar-prd do destino informado na instalação, depois de preservar eventuais edições próprias. O instalador não modifica suas configurações de MCP."
     },
-    "prompt": "Use $criar-prd para definir um PRD de uma biblioteca de carrinho de compras. Preserve hipóteses e decisões pendentes.",
+    "prompt": "Use $criar-prd para me ajudar a criar um guia de boas-vindas para novos funcionários da minha loja. Não tenho conhecimento técnico.",
     "tags": [
-      "prd",
-      "spec",
-      "produto",
-      "requisitos",
-      "teste",
-      "governança"
+      "planejamento",
+      "processos",
+      "documentos",
+      "negócios",
+      "projetos",
+      "planilhas",
+      "guias",
+      "eventos",
+      "software"
     ]
   },
   {
     "id": "criar-spec",
     "type": "skill",
-    "title": "Derivar uma SPEC",
-    "summary": "Converta o PRD em uma entrega implementável com contratos e validação.",
-    "outcome": "Uma SPEC vinculada aos requisitos, com dependências e exemplos verificáveis.",
+    "title": "Detalhar a entrega (SPEC)",
+    "summary": "Transforme o que foi combinado em passos, materiais e formas de conferir.",
+    "outcome": "Um plano de entrega que pode ser usado sem conhecer programação.",
     "provider": "Pedro Eckel",
     "ownership": "autoral",
     "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/criar-spec",
     "license": "CC-BY-4.0",
     "skillPath": "skills/criar-spec",
-    "level": "intermediario",
+    "level": "iniciante",
     "goals": [
       "planejamento"
     ],
@@ -85,19 +88,19 @@
       "claude-code"
     ],
     "compatibility": {
-      "codex": "Fluxo exercitado em ambiente local; veja a evidência e seus limites.",
-      "claude-code": "Formato e instalação documentados; a execução completa dentro do Claude Code ainda não foi observada."
+      "codex": "Formato compatível documentado; execução desta revisão 2.0.0 no cliente e uso por pessoas não técnicas ainda em avaliação.",
+      "claude-code": "Formato compatível documentado; execução desta revisão 2.0.0 no cliente e uso por pessoas não técnicas ainda em avaliação."
     },
     "validation": {
-      "status": "testado",
-      "date": "2026-11-12",
-      "version": "1.0.0",
-      "environment": "Exercício local com agente de programação; Python 3.13.0 e Poetry 2.2.1.",
-      "scope": "Fluxo conjunto PRD → SPEC → implementação de uma biblioteca de carrinho; 8 critérios, 26 testes e 4 mutações detectadas na rodada final.",
-      "limitations": "Um exemplo pequeno, sem serviços externos. Não comprova uso em turma, compatibilidade universal ou auditoria de segurança. A versão publicada só acrescenta metadados de licença às duas primeiras skills.",
-      "evidence": "evidence/fluxo-produto.md",
+      "status": "em-avaliacao",
+      "date": null,
+      "version": "2.0.0",
+      "environment": "Exercícios locais de agente e revisão independente das instruções em 16/11/2026; sem teste humano.",
+      "scope": "Cenário de guia de boas-vindas com as três skills e preparação de troca de livros com criar-spec e executar-spec. Conferência estrutural, do catálogo e do instalador separada dos exercícios.",
+      "limitations": "Validação estrutural não comprova facilidade de uso. A revisão 2.0.0 precisa ser exercitada nos clientes e com o público-alvo antes de receber selo de teste.",
+      "evidence": "evidence/fluxo-generico-2.0.0.md",
       "reviewAfterDays": 90,
-      "contentSha256": "9bd025c2df5268f7a7d4557cccc8121321a04c9971af884c419f06466377aa8b"
+      "contentSha256": "c66f0955b4b629476f83c846fe3cc397f16e5814762a6af5846a43a805001bc7"
     },
     "setup": {
       "requirements": [
@@ -106,8 +109,8 @@
       ],
       "steps": [
         {
-          "text": "Baixe o repositório e entre na pasta.",
-          "code": "git clone https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+          "text": "Baixe a edição 2.0.0 do catálogo e entre na pasta.",
+          "code": "git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
         },
         {
           "text": "Confira o destino antes de instalar.",
@@ -121,28 +124,31 @@
       "verify": "No Codex, abra a seleção de skills ou mencione $criar-spec. No Claude Code, use /criar-spec; via plugin, use /produto-para-codigo:criar-spec. Se não aparecer, confira o destino indicado pelo instalador.",
       "uninstall": "Remova somente a pasta criar-spec do destino informado na instalação, depois de preservar eventuais edições próprias. O instalador não modifica suas configurações de MCP."
     },
-    "prompt": "Use $criar-spec para derivar uma SPEC a partir de docs/produto/prd-carrinho.md.",
+    "prompt": "Use $criar-spec para detalhar o guia de boas-vindas que definimos nesta conversa, com passos e formas de conferir.",
     "tags": [
-      "prd",
-      "spec",
-      "produto",
-      "requisitos",
-      "teste",
-      "governança"
+      "planejamento",
+      "processos",
+      "documentos",
+      "negócios",
+      "projetos",
+      "planilhas",
+      "guias",
+      "eventos",
+      "software"
     ]
   },
   {
     "id": "executar-spec",
     "type": "skill",
-    "title": "Implementar e verificar",
-    "summary": "Execute a SPEC com tarefas pequenas, testes e revisão independente.",
-    "outcome": "Implementação e evidências dos critérios de aceite, com lacunas visíveis.",
+    "title": "Produzir e conferir",
+    "summary": "Realize o trabalho a partir do plano e confira o que ficou pronto.",
+    "outcome": "Uma entrega revisada, com indicação clara do que depende de dados ou ações externas.",
     "provider": "Pedro Eckel",
     "ownership": "autoral",
     "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/executar-spec",
     "license": "CC-BY-4.0",
     "skillPath": "skills/executar-spec",
-    "level": "intermediario",
+    "level": "iniciante",
     "goals": [
       "desenvolvimento"
     ],
@@ -151,19 +157,19 @@
       "claude-code"
     ],
     "compatibility": {
-      "codex": "Fluxo exercitado em ambiente local; veja a evidência e seus limites.",
-      "claude-code": "Formato e instalação documentados; a execução completa dentro do Claude Code ainda não foi observada."
+      "codex": "Formato compatível documentado; execução desta revisão 2.0.0 no cliente e uso por pessoas não técnicas ainda em avaliação.",
+      "claude-code": "Formato compatível documentado; execução desta revisão 2.0.0 no cliente e uso por pessoas não técnicas ainda em avaliação."
     },
     "validation": {
-      "status": "testado",
-      "date": "2026-11-12",
-      "version": "1.0.1",
-      "environment": "Exercício local com agente de programação; Python 3.13.0 e Poetry 2.2.1.",
-      "scope": "Fluxo conjunto PRD → SPEC → implementação de uma biblioteca de carrinho; 8 critérios, 26 testes e 4 mutações detectadas na rodada final.",
-      "limitations": "Um exemplo pequeno, sem serviços externos. Não comprova uso em turma, compatibilidade universal ou auditoria de segurança. A versão publicada só acrescenta metadados de licença às duas primeiras skills.",
-      "evidence": "evidence/fluxo-produto.md",
+      "status": "em-avaliacao",
+      "date": null,
+      "version": "2.0.0",
+      "environment": "Exercícios locais de agente e revisão independente das instruções em 16/11/2026; sem teste humano.",
+      "scope": "Cenário de guia de boas-vindas com as três skills e preparação de troca de livros com criar-spec e executar-spec. Conferência estrutural, do catálogo e do instalador separada dos exercícios.",
+      "limitations": "Validação estrutural não comprova facilidade de uso. A revisão 2.0.0 precisa ser exercitada nos clientes e com o público-alvo antes de receber selo de teste.",
+      "evidence": "evidence/fluxo-generico-2.0.0.md",
       "reviewAfterDays": 90,
-      "contentSha256": "dab4642d0b0142c448916dda578fd7e4245b484c5305d2c8f13d4ebd407d076e"
+      "contentSha256": "2f2c3ec83a1cdb8232aab8963d5aaf79844d129c7388a9f0e09ef167873a59ba"
     },
     "setup": {
       "requirements": [
@@ -172,8 +178,8 @@
       ],
       "steps": [
         {
-          "text": "Baixe o repositório e entre na pasta.",
-          "code": "git clone https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+          "text": "Baixe a edição 2.0.0 do catálogo e entre na pasta.",
+          "code": "git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
         },
         {
           "text": "Confira o destino antes de instalar.",
@@ -187,13 +193,19 @@
       "verify": "No Codex, abra a seleção de skills ou mencione $executar-spec. No Claude Code, use /executar-spec; via plugin, use /produto-para-codigo:executar-spec. Se não aparecer, confira o destino indicado pelo instalador.",
       "uninstall": "Remova somente a pasta executar-spec do destino informado na instalação, depois de preservar eventuais edições próprias. O instalador não modifica suas configurações de MCP."
     },
-    "prompt": "Use $executar-spec para implementar docs/entregas/spec-carrinho.md. Trabalhe no repositório do exercício.",
+    "prompt": "Use $executar-spec para produzir o guia de boas-vindas a partir do plano desta conversa. Use apenas os dados fornecidos e sinalize o que faltar.",
     "tags": [
-      "spec",
-      "implementação",
-      "testes",
-      "verificação",
-      "código"
+      "execução",
+      "documentos",
+      "processos",
+      "conferência",
+      "projetos",
+      "planilhas",
+      "guias",
+      "eventos",
+      "software",
+      "código",
+      "testes"
     ]
   }
 ]

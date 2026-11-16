@@ -1,4 +1,4 @@
 interface:
-  display_name: "Criar PRD"
-  short_description: "Transforma uma necessidade em PRD rastreável"
-  default_prompt: "Use $criar-prd para transformar esta necessidade em um PRD alinhado ao projeto, com escopo, requisitos e critérios de aceite."
+  display_name: "Definir uma ideia (PRD)"
+  short_description: "Organiza sua ideia e define o que entregar"
+  default_prompt: "Use $criar-prd para me ajudar a organizar esta ideia, explicar o que quero entregar e como conferir o resultado. Não tenho conhecimento técnico."
