@@ -47,3 +47,15 @@ test('download do conselho preserva licença, referências e bytes conferidos pe
   const sums = await readFile(path.join(root, 'SHA256SUMS'), 'utf8');
   assert.ok(sums.includes(sha256(zip) + '  ' + id + '.zip'));
 });
+
+test('conselho fica disponível no catálogo sem virar etapa obrigatória do percurso inicial', async () => {
+  const { home } = await import('../scripts/lib/render.mjs');
+  const config = JSON.parse(await readFile(new URL('../catalog/config.json', import.meta.url), 'utf8'));
+  const html = home(config, resources);
+  assert.ok(html.includes('id="resource-native-llm-council"'));
+  const pathSection = html.match(/<aside class="learning-path"[\s\S]*?<\/aside>/)?.[0];
+  assert.ok(pathSection);
+  const steps = [...pathSection.matchAll(/href="recursos\/([^/]+)\/"/g)].map(match => match[1]);
+  assert.deepEqual(steps, ['criar-prd', 'criar-spec', 'executar-spec']);
+  assert.ok(!html.includes('pacote das três skills'));
+});
