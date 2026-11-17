@@ -207,5 +207,74 @@
       "código",
       "testes"
     ]
+  },
+  {
+    "id": "native-llm-council",
+    "type": "skill",
+    "title": "Conselho de IAs Nativo",
+    "summary": "Compare três análises independentes, receba três revisões novas e uma síntese com evidências e divergências.",
+    "outcome": "Uma recomendação auditável para uma decisão, com limites e próximos passos.",
+    "provider": "Pedro Eckel",
+    "ownership": "autoral",
+    "url": "https://github.com/pedroeckel/ia-em-pratica/tree/main/skills/native-llm-council",
+    "license": "CC-BY-4.0",
+    "skillPath": "skills/native-llm-council",
+    "level": "intermediario",
+    "goals": [
+      "planejamento",
+      "pesquisa"
+    ],
+    "clients": [
+      "codex",
+      "claude-code"
+    ],
+    "compatibility": {
+      "codex": "Protocolo exercitado com subagentes nativos hospedados; a instalação desta versão no Codex local permanece em avaliação.",
+      "claude-code": "Adaptação documentada para Agent nativo; instalação e execução no Claude Code ainda não verificadas."
+    },
+    "validation": {
+      "status": "em-avaliacao",
+      "date": null,
+      "version": "0.1.0",
+      "environment": "Revisão de instruções e exercício sintético com subagentes hospedados em 17/11/2026; sem dados de clientes.",
+      "scope": "Três análises, três revisões novas e síntese no protocolo inicial. Correções e tradução posteriormente revisadas; não equivalem à regressão completa da versão distribuída.",
+      "limitations": "Não demonstra diversidade de modelos nem execução no Claude Code. Custos e identidades de modelos não expostos. Restrições comportamentais não comprovam sandbox técnico.",
+      "evidence": "evidence/native-llm-council-0.1.0.md",
+      "reviewAfterDays": 60,
+      "contentSha256": "36ac9b96b2757bb51367fff9023878d0676b12659baa45e5e2e4b179e3567ac4"
+    },
+    "setup": {
+      "requirements": [
+        "Codex ou Claude Code com subagentes nativos disponíveis e sessões independentes.",
+        "Node.js 22+ e Git para o instalador; alternativa manual por ZIP no guia.",
+        "Pedido explícito do usuário para executar um conselho. Não requer chave de API de modelo."
+      ],
+      "steps": [
+        {
+          "text": "Baixe a edição do catálogo e entre na pasta.",
+          "code": "git clone --branch v2.1.0 https://github.com/pedroeckel/ia-em-pratica.git\ncd ia-em-pratica"
+        },
+        {
+          "text": "Confira o destino antes de instalar.",
+          "code": "node scripts/install.mjs --skill native-llm-council --agent codex --scope user --dry-run"
+        },
+        {
+          "text": "Instale. Para Claude Code, troque --agent codex por --agent claude-code.",
+          "code": "node scripts/install.mjs --skill native-llm-council --agent codex --scope user"
+        }
+      ],
+      "verify": "No Codex, peça $native-llm-council. No Claude Code individual, /native-llm-council; pelo plugin, /produto-para-codigo:native-llm-council. COMPLETE exige três análises e três revisões novas; sem subagentes isolados, o resultado é NOT_RUN.",
+      "uninstall": "Remova somente a pasta native-llm-council do destino informado, preservando edições próprias. No pacote Claude, use o gerenciador de plugins."
+    },
+    "prompt": "Use $native-llm-council para avaliar esta decisão com três análises independentes e revisão cruzada. Utilize somente as evidências que eu fornecer e não execute a implementação.",
+    "tags": [
+      "conselho",
+      "multiagente",
+      "subagentes",
+      "decisões",
+      "revisão",
+      "evidências",
+      "Karpathy"
+    ]
   }
 ]

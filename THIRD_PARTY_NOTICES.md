@@ -6,3 +6,5 @@
 - A revisão 2.0.0 remove as referências ao projeto que orientou a primeira adaptação e oferece um fluxo genérico para entregas técnicas e não técnicas.
 - Recursos de terceiros futuros mantêm suas licenças e autoria upstream. Nenhum MCP ou plugin externo é distribuído na primeira edição. Não há parceria ou endosso presumido.
 - As dependências npm são ferramentas de desenvolvimento com suas próprias licenças e estão fixadas no package-lock.json.
+
+- `native-llm-council` 0.1.0: instruções autorais de Pedro Eckel, CC BY 4.0. Inspirado no fluxo de respostas independentes, revisão com autoria ocultada e síntese do [LLM Council de Andrej Karpathy](https://github.com/karpathy/llm-council). Adaptação conceitual com subagentes nativos; nenhum código do aplicativo original foi copiado. Não se afirma afiliação ou endosso.

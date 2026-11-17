@@ -1,5 +1,13 @@
 # Histórico
 
+## 2.1.0 — 2026-11-17
+
+- Adiciona Conselho de IAs Nativo 0.1.0 em português: três análises independentes, três revisões novas e síntese com divergências.
+- Usa subagentes do cliente atual, sem APIs externas de modelo nem implementação automática; exige pedido explícito.
+- Publica como em avaliação, com evidência sintética e limites de instalação e execução por cliente.
+- Inclui a skill no catálogo, instalador, plugin Claude e downloads com integridade; preserva as versões 2.0.0 das três skills existentes.
+- Cria a tag versionada da edição somente após a matriz de qualidade na main; o site aguarda a tag antes de publicar.
+
 ## 2.0.0 — 2026-11-16
 
 - Reescreve as três skills para trabalhos técnicos e não técnicos, com entrada em linguagem comum e uso direto no chat.

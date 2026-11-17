@@ -1,6 +1,6 @@
 # Instalar e usar
 
-> Esta página instala a edição v2.0.0. Ela mantém o estado “em avaliação”: os exercícios de agente não substituem testes com usuários. Preserve suas edições antes de atualizar uma skill 1.x; o instalador recusa sobrescrever conteúdo diferente.
+> Esta página instala a edição v2.1.0. Ela mantém o estado “em avaliação”: os exercícios de agente não substituem testes com usuários. Preserve suas edições antes de atualizar uma skill 1.x; o instalador recusa sobrescrever conteúdo diferente.
 
 ## Qual cliente você usa?
 
@@ -17,7 +17,7 @@ Esses destinos são locais; não significam instalação em ChatGPT na nuvem ou 
 Requisitos: Git e Node.js 22 ou superior. Baixe a versão da aula e entre na pasta:
 
 ```sh
-git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git
+git clone --branch v2.1.0 https://github.com/pedroeckel/ia-em-pratica.git
 cd ia-em-pratica
 node scripts/install.mjs --skill all --agent codex --scope user --dry-run
 node scripts/install.mjs --skill all --agent codex --scope user
@@ -25,7 +25,7 @@ node scripts/install.mjs --skill all --agent codex --scope user
 
 Não é necessário executar `npm install` para usar esse instalador. Suas operações usam apenas o Node. Ele não instala MCPs, não pede tokens, não modifica configurações de clientes e não executa scripts das skills.
 
-Para Claude Code, troque `--agent codex` por `--agent claude-code`. Para instalar uma única skill, substitua `all` por `criar-prd`, `criar-spec` ou `executar-spec`.
+Para Claude Code, troque `--agent codex` por `--agent claude-code`. Para instalar uma única skill, substitua `all` por `criar-prd`, `criar-spec`, `executar-spec` ou `native-llm-council`.
 
 Para limitar ao projeto, execute da pasta do catálogo e indique um diretório já existente:
 
@@ -71,3 +71,11 @@ No Claude Code com pasta individual: `/criar-prd Ajude a organizar a criação d
 No Claude Code com o plugin: `/produto-para-codigo:criar-prd Ajude a organizar a criação de um guia de boas-vindas para novos funcionários da minha loja.`
 
 Continue no próprio chat para detalhar o plano e produzir o material: no Codex, use `$criar-spec` e `$executar-spec`; no Claude Code com pastas individuais, `/criar-spec` e `/executar-spec`; via plugin, `/produto-para-codigo:criar-spec` e `/produto-para-codigo:executar-spec`. Não é necessário saber programar ou informar caminhos de arquivos. Veja os [exemplos não técnicos](../examples/fluxo-generico/README.md). O [exercício de software](../examples/fluxo-completo/relatorio.md) é uma referência histórica das versões 1.x, não um pré-requisito. As regras do seu repositório e as permissões reais do cliente continuam valendo.
+
+## Conselho de IAs Nativo (opcional)
+
+Instale apenas esta skill com `node scripts/install.mjs --skill native-llm-council --agent codex --scope user --dry-run` e repita sem `--dry-run` após conferir o destino. Para Claude Code individual, use `--agent claude-code`.
+
+Acione com `$native-llm-council` no Codex, `/native-llm-council` no Claude Code individual ou `/produto-para-codigo:native-llm-council` no plugin. É necessário ter subagentes nativos isolados disponíveis. A instalação por pasta/ZIP não habilita essa capacidade nem concede permissões.
+
+São três análises e três revisões novas, em duas rodadas. A síntese explicita divergências e evidências ausentes. Sem a capacidade necessária, a skill retorna `NOT_RUN`; participantes ausentes produzem `INCOMPLETE`. Ela não chama APIs externas de modelos, não implementa a recomendação e não altera configurações do cliente. A compatibilidade funcional no Claude Code ainda precisa ser exercitada.

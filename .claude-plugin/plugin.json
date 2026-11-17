@@ -1,7 +1,7 @@
 {
   "name": "produto-para-codigo",
-  "version": "2.0.0",
-  "description": "Três skills para definir uma ideia, detalhar a entrega e produzir com conferência, em trabalhos técnicos ou não técnicos.",
+  "version": "2.1.0",
+  "description": "Defina ideias, planeje e produza entregas; compare decisões com um conselho de subagentes nativos.",
   "author": {
     "name": "Pedro Eckel"
   },
@@ -12,6 +12,8 @@
     "prd",
     "spec",
     "skills",
-    "educacao"
+    "educacao",
+    "conselho",
+    "subagentes"
   ]
 }

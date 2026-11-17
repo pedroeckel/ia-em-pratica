@@ -2,9 +2,9 @@
 
 **Recursos de IA para aprender fazendo — com instruções, exemplos e evidências.**
 
-Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e para quem quer aplicar IA em projetos reais. As três skills organizam um fluxo de definição, planejamento e execução de trabalhos técnicos ou não técnicos.
+Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e para quem quer aplicar IA em projetos reais. Três skills organizam o fluxo de definição, planejamento e execução. Uma quarta, opcional, compara decisões com subagentes nativos.
 
-> Edição 2.0.0: instruções genéricas, com exemplos fora de tecnologia. As skills permanecem em avaliação; ainda não houve teste com pessoas do público-alvo.
+> Edição 2.1.0: inclui o Conselho de IAs Nativo 0.1.0, opcional e somente para análise. As skills permanecem em avaliação; ainda não houve teste com pessoas do público-alvo.
 
 [**Explorar o catálogo →**](https://pedroeckel.github.io/ia-em-pratica/) · [Começar pelos exemplos](examples/fluxo-generico/README.md) · [Como validamos](docs/curadoria.md) · [Catálogo no GitHub](CATALOG.md)
 
@@ -15,6 +15,7 @@ Curadoria de [Pedro Eckel](https://github.com/pedroeckel) para suas turmas e par
 | Organizar uma ideia | [criar-prd](skills/criar-prd/SKILL.md) | O que entregar, para quem e como conferir |
 | Planejar como produzir a entrega | [criar-spec](skills/criar-spec/SKILL.md) | Passos, materiais, regras e checagens |
 | Produzir e conferir o trabalho | [executar-spec](skills/executar-spec/SKILL.md) | Documento, planilha, material, processo ou software, conforme o pedido |
+| Comparar decisões com agentes independentes | [native-llm-council](skills/native-llm-council/SKILL.md) | Três propostas, três revisões novas e síntese com divergências |
 
 **PRD** é o documento de requisitos do produto; **SPEC** detalha uma entrega e como verificá-la.
 
@@ -32,7 +33,7 @@ Você pode começar de uma ideia, um plano já existente ou uma conversa anterio
 Para o Codex, com Node.js 22+ e Git instalados:
 
 ```sh
-git clone --branch v2.0.0 https://github.com/pedroeckel/ia-em-pratica.git
+git clone --branch v2.1.0 https://github.com/pedroeckel/ia-em-pratica.git
 cd ia-em-pratica
 node scripts/install.mjs --skill all --agent codex --scope user --dry-run
 node scripts/install.mjs --skill all --agent codex --scope user
@@ -49,7 +50,13 @@ No Claude Code, você também pode instalar o pacote nativo:
 /plugin install produto-para-codigo@ia-em-pratica
 ```
 
-Depois, invoque `/produto-para-codigo:criar-prd`, `/produto-para-codigo:criar-spec` ou `/produto-para-codigo:executar-spec`. O manifesto é validado estruturalmente; a execução completa nesse cliente ainda não foi observada. Para skill individual em pasta, use `--agent claude-code`. Veja as diferenças no guia.
+Depois, invoque `/produto-para-codigo:criar-prd`, `/produto-para-codigo:criar-spec`, `/produto-para-codigo:executar-spec` ou `/produto-para-codigo:native-llm-council`. O manifesto é validado estruturalmente; a execução completa nesse cliente ainda não foi observada. Para skill individual em pasta, use `--agent claude-code`. Veja as diferenças no guia.
+
+## Conselho de IAs Nativo
+
+Peça explicitamente: `Use $native-llm-council para comparar as alternativas desta decisão usando somente as evidências fornecidas.` A skill usa subagentes do cliente atual, sem API externa de modelo nem alternância automática entre Codex e Claude. Requer sessões independentes; se não estiverem disponíveis, informa `NOT_RUN`.
+
+O conselho faz somente análise. Não implementa nem publica suas recomendações. O protocolo inicial foi exercitado com seis subagentes hospedados; a distribuição 0.1.0 e o Claude Code continuam em avaliação. [Evidência e limites](evidence/native-llm-council-0.1.0.md).
 
 ## O que foi validado
 
