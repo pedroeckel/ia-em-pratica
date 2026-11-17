@@ -1,8 +1,8 @@
 # Publicação e manutenção
 
-O workflow de qualidade verifica o catálogo, os testes, o build e o exercício em Linux (Node 22/Python 3.12 e Node 24/Python 3.13) e Windows (Node 22/Python 3.13). Apenas após a matriz passar, um push na main gera e publica o GitHub Pages. PRs executam os testes sem publicar o site.
+O workflow de qualidade verifica o catálogo, os testes, o build e o exercício em Linux (Node 22/Python 3.12 e Node 24/Python 3.13) e Windows (Node 22/Python 3.13). Apenas após a matriz passar, um push na main fixa a tag da edição e gera e publica o GitHub Pages. A tag é criada no commit aprovado e nunca sobrescrita. Antes de integrar outro commit na main, aumente a versão da edição em package.json, package-lock.json, catalog/config.json e nos manifests Claude; o deploy falha se a mesma versão já identificar outro commit. PRs executam os testes sem publicar o site.
 
-A automação usa permissões de leitura por padrão; apenas o job de deploy recebe `pages: write` e `id-token: write`. Actions são fixadas a commits, com atualizações propostas pelo Dependabot. Não há secrets de provedores, tokens de aluno ou execução de integrações externas no CI.
+A automação usa permissões de leitura por padrão; o job de tag recebe `contents: write` somente na main e após os checks, e o job de deploy recebe `pages: write` e `id-token: write`. Actions são fixadas a commits, com atualizações propostas pelo Dependabot. Não há secrets de provedores, tokens de aluno ou execução de integrações externas no CI.
 
 Antes de uma versão: revise o PRD/SPEC quando houver impacto, execute `npm run check` e a regressão do exemplo, atualize `CHANGELOG.md`, `package.json` e `catalog/config.json`, e faça revisão independente. Uma nova versão do catálogo não muda automaticamente a versão das skills. Alterações em instruções testadas exigem nova evidência e fingerprint.
 

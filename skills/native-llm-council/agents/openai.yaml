@@ -1,0 +1,6 @@
+interface:
+  display_name: "Conselho de IAs Nativo"
+  short_description: "Agentes independentes, revisão anônima e síntese"
+  default_prompt: "Use $native-llm-council para comparar propostas independentes para esta decisão."
+policy:
+  allow_implicit_invocation: false

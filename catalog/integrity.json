@@ -16,5 +16,12 @@
     "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
     "references/execucao-e-validacao.md": "d1095e3dd9c2d611fa086500f98db290aef31aea622b45e6d80e7cc951b6c29c",
     "SKILL.md": "8a17a258da3c561de74393154342072ce36f96861e79ac76512f5d8556326333"
+  },
+  "native-llm-council": {
+    "agents/openai.yaml": "642827601e423d3d2d9b5d146a939c11d472ff43e3254bb6e52d8604f01ab77e",
+    "LICENSE": "35a0c05578ac7bcac697cf46ae7299145bd39436ebe2b92139ee9b89a00a0772",
+    "references/prompts.md": "9696779290ecc3a32d1d5e821398252312e41c27b394f7ce6a8634ec909f0e6a",
+    "references/runtimes.md": "53e30ca66637298d0da944768c4054c6ef05a4cb773d95b3ed748553aa42faf9",
+    "SKILL.md": "4447ac6695248ed94006f679f0c73321feceb71d8d1cfd709254372d30a48d85"
   }
 }

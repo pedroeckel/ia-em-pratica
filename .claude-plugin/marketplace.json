@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Recursos de IA com curadoria e evidências para aprender fazendo.",
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "plugins": [
     {
       "name": "produto-para-codigo",
       "source": "./",
-      "description": "Defina a ideia, detalhe o plano e produza a entrega com três skills acessíveis."
+      "description": "Quatro skills para definir, planejar, produzir e deliberar com evidências."
     }
   ]
 }
